@@ -1,0 +1,97 @@
+{
+ "id": "c4_stairs",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_store_b",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_stairs__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_stairs__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "step_odd",
+   "rect": [
+    440,
+    500,
+    640,
+    140
+   ],
+   "when": "not f('step_lifted')",
+   "kind": null
+  },
+  {
+   "id": "frag7",
+   "rect": [
+    680,
+    510,
+    150,
+    90
+   ],
+   "when": "f('step_lifted') and not f('got_frag7')",
+   "kind": null
+  },
+  {
+   "id": "stair_steps",
+   "rect": [
+    120,
+    200,
+    1360,
+    700
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "step_open",
+   "show": "f('step_lifted')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_stairs__step_open.webp",
+   "rect": [
+    418,
+    374,
+    642,
+    280
+   ],
+   "pivot": null
+  },
+  {
+   "id": "frag7",
+   "show": "f('step_lifted') and not f('got_frag7')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_stairs__frag7.webp",
+   "rect": [
+    696,
+    526,
+    154,
+    103
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

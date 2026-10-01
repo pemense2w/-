@@ -1,0 +1,105 @@
+{
+ "id": "c4_quarters_a",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_quarters_b",
+  "right": "c4_quarters_b"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_quarters_a__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_quarters_a__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "watch",
+   "rect": [
+    1030,
+    520,
+    120,
+    120
+   ],
+   "when": "not f('got_watch')",
+   "kind": null
+  },
+  {
+   "id": "bed",
+   "rect": [
+    140,
+    430,
+    780,
+    400
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bedside",
+   "rect": [
+    950,
+    610,
+    280,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "trunk",
+   "rect": [
+    1290,
+    690,
+    240,
+    140
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_q",
+   "rect": [
+    1060,
+    120,
+    260,
+    440
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "watch",
+   "show": "not f('got_watch')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_quarters_a__watch.webp",
+   "rect": [
+    1046,
+    522,
+    124,
+    152
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

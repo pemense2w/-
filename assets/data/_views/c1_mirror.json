@@ -79,6 +79,6 @@
   }
  ],
  "meta": {},
- "dark": "0.46 if not f('lantern_placed') else 0.2",
- "ambient": "#0a1820"
+ "dark": "pick(f('lantern_placed'), 0.2, 0.46)",
+ "ambient": "#3a4d5c"
 }

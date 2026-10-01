@@ -1,0 +1,87 @@
+{
+ "id": "c4_valves",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_watch_b",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_valves__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_valves__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "valve_board",
+   "rect": [
+    150,
+    200,
+    1300,
+    600
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "valves",
+   "kind": "valves",
+   "rect": [
+    180,
+    230,
+    1240,
+    540
+   ],
+   "when": null,
+   "args": {
+    "cells": [
+     [
+      320,
+      400,
+      200,
+      200
+     ],
+     [
+      700,
+      400,
+      200,
+      200
+     ],
+     [
+      1080,
+      400,
+      200,
+      200
+     ]
+    ],
+    "flag": "valves_ok",
+    "solution": [
+     3,
+     1,
+     4
+    ],
+    "seized": 1
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

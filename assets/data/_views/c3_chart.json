@@ -1,0 +1,100 @@
+{
+ "id": "c3_chart",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_deck",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_chart.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "chart_paper",
+   "rect": [
+    140,
+    40,
+    1320,
+    920
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "warn",
+   "key": "world.chart_warn",
+   "rect": [
+    880,
+    70,
+    540,
+    50
+   ],
+   "size": 26,
+   "color": "#7a2a22",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 3,
+   "outline": null
+  },
+  {
+   "id": "stern",
+   "key": "world.chart_stern",
+   "rect": [
+    170,
+    70,
+    540,
+    50
+   ],
+   "size": 26,
+   "color": "#3a2d1f",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 3,
+   "outline": null
+  }
+ ],
+ "widgets": [
+  {
+   "id": "rowing",
+   "kind": "rowing",
+   "rect": [
+    300,
+    140,
+    800,
+    800
+   ],
+   "when": null,
+   "args": {
+    "grid": 5,
+    "origin": [
+     300,
+     140
+    ],
+    "cell": 160
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.06",
+ "ambient": "#334756"
+}

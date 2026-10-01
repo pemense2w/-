@@ -1,0 +1,41 @@
+{
+ "id": "item_oar2",
+ "chapter": "items",
+ "kind": "item",
+ "size": [
+  384,
+  384
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "icon",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "items/item_oar2__icon.webp",
+   "rect": [
+    0,
+    0,
+    384,
+    384
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {
+  "item": "oar2",
+  "light": null
+ },
+ "dark": null,
+ "ambient": null
+}

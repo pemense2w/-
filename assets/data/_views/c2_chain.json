@@ -1,0 +1,99 @@
+{
+ "id": "c2_chain",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_right",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_chain.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lock_body",
+   "rect": [
+    420,
+    240,
+    760,
+    600
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "dials",
+   "kind": "dials",
+   "rect": [
+    420,
+    330,
+    760,
+    420
+   ],
+   "when": null,
+   "args": {
+    "cells": [
+     [
+      490,
+      460,
+      160,
+      160
+     ],
+     [
+      720,
+      460,
+      160,
+      160
+     ],
+     [
+      950,
+      460,
+      160,
+      160
+     ]
+    ],
+    "digits": true,
+    "symbols": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "solution": [
+     "1",
+     "7",
+     "2"
+    ],
+    "flag": "chain_free",
+    "init": [
+     4,
+     0,
+     8
+    ]
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.06",
+ "ambient": "#2c3b46"
+}

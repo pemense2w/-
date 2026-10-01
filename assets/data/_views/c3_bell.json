@@ -1,0 +1,58 @@
+{
+ "id": "c3_bell",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_stern",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_bell.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "bell_body",
+   "rect": [
+    480,
+    380,
+    640,
+    420
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "rhythm",
+   "kind": "rhythm",
+   "rect": [
+    300,
+    300,
+    1000,
+    650
+   ],
+   "when": null,
+   "args": {
+    "mode": "answer",
+    "cx": 800,
+    "cy": 640
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#334756"
+}

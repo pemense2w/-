@@ -1,0 +1,111 @@
+{
+ "id": "c3_deck",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_deck.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "chart_table",
+   "rect": [
+    200,
+    540,
+    400,
+    270
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "compass",
+   "rect": [
+    1050,
+    520,
+    260,
+    260
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "pell",
+   "rect": [
+    930,
+    440,
+    180,
+    260
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "lantern_deck",
+   "rect": [
+    690,
+    480,
+    220,
+    240
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "line_coil",
+   "rect": [
+    440,
+    800,
+    180,
+    160
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 600,
+   "r": 700,
+   "color": "#ffb860",
+   "when": null,
+   "intensity": 0.8,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "pell_jar",
+   "show": null,
+   "fx": "bob",
+   "z": 0,
+   "tex": "c3/c3_deck__pell_jar.webp",
+   "rect": [
+    936,
+    452,
+    204,
+    282
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#334756"
+}

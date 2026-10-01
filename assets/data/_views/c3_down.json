@@ -1,0 +1,81 @@
+{
+ "id": "c3_down",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_down.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "down_look",
+   "rect": [
+    200,
+    160,
+    1200,
+    700
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 300,
+   "r": 700,
+   "color": "#ffd890",
+   "when": null,
+   "intensity": 0.5,
+   "flicker": 0.0,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "hand",
+   "show": null,
+   "fx": "pulse",
+   "z": 0,
+   "tex": "c3/c3_down__hand.webp",
+   "rect": [
+    680,
+    218,
+    231,
+    314
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moth_down",
+   "show": null,
+   "fx": "bob",
+   "z": 0,
+   "tex": "c3/c3_down__moth_down.webp",
+   "rect": [
+    718,
+    196,
+    164,
+    87
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.0",
+ "ambient": "#334756"
+}

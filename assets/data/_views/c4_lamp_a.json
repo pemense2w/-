@@ -1,0 +1,154 @@
+{
+ "id": "c4_lamp_a",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_lamp_b",
+  "right": "c4_lamp_b"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_lamp_a__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_lamp_a__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lens",
+   "rect": [
+    240,
+    200,
+    560,
+    520
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "wick",
+   "rect": [
+    460,
+    400,
+    120,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_sea",
+   "rect": [
+    1010,
+    80,
+    480,
+    640
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "oil_tank",
+   "rect": [
+    400,
+    690,
+    240,
+    180
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "stairs_down",
+   "rect": [
+    100,
+    600,
+    220,
+    260
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 520,
+   "y": 460,
+   "r": 700,
+   "color": "#ffb860",
+   "when": "f('lamp_lit')",
+   "intensity": 1.2,
+   "flicker": 0.05,
+   "hole": 1.0
+  },
+  {
+   "x": 520,
+   "y": 480,
+   "r": 420,
+   "color": "#ffb050",
+   "when": "era() == 'then' and not f('lamp_lit')",
+   "intensity": 0.5,
+   "flicker": 0.1,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "wick_flame",
+   "show": "f('lamp_lit')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c4/c4_lamp_a__wick_flame.webp",
+   "rect": [
+    484,
+    367,
+    72,
+    139
+   ],
+   "pivot": null
+  },
+  {
+   "id": "wick",
+   "show": "not f('lamp_lit')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_lamp_a__wick.webp",
+   "rect": [
+    496,
+    406,
+    84,
+    208
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oil_level",
+   "show": "f('valves_ok')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_lamp_a__oil_level.webp",
+   "rect": [
+    428,
+    558,
+    184,
+    34
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

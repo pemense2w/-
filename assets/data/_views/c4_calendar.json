@@ -1,0 +1,142 @@
+{
+ "id": "c4_calendar",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_quarters_b",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_calendar__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_calendar__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "cal_page",
+   "rect": [
+    450,
+    330,
+    700,
+    560
+   ],
+   "when": "era() == 'then' and not f('cal_lifted')",
+   "kind": null
+  },
+  {
+   "id": "cal_behind",
+   "rect": [
+    450,
+    300,
+    700,
+    580
+   ],
+   "when": "era() == 'then' and f('cal_lifted')",
+   "kind": null
+  },
+  {
+   "id": "cal_now",
+   "rect": [
+    420,
+    60,
+    760,
+    880
+   ],
+   "when": "era() == 'now' and not f('cal_lifted')",
+   "kind": null
+  },
+  {
+   "id": "frag8",
+   "rect": [
+    540,
+    490,
+    200,
+    130
+   ],
+   "when": "era() == 'now' and f('cal_lifted') and not f('got_frag8')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "cal_title",
+   "key": "world.cal_month",
+   "rect": [
+    440,
+    70,
+    720,
+    140
+   ],
+   "size": 70,
+   "color": "#efe2b8",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 6,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "cal_page",
+   "show": "era() == 'then' and not f('cal_lifted')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_calendar__cal_page.webp",
+   "rect": [
+    446,
+    326,
+    744,
+    608
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cal_page_up",
+   "show": "era() == 'then' and f('cal_lifted')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_calendar__cal_page_up.webp",
+   "rect": [
+    446,
+    296,
+    764,
+    228
+   ],
+   "pivot": null
+  },
+  {
+   "id": "frag8",
+   "show": "era() == 'now' and f('cal_lifted') and not f('got_frag8')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_calendar__frag8.webp",
+   "rect": [
+    556,
+    502,
+    196,
+    146
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

@@ -1,0 +1,86 @@
+{
+ "id": "c4_tin",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_store_a",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_tin__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_tin__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "stem",
+   "rect": [
+    720,
+    480,
+    260,
+    110
+   ],
+   "when": "not f('got_stem')",
+   "kind": null
+  },
+  {
+   "id": "tin_inside",
+   "rect": [
+    420,
+    360,
+    760,
+    420
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "tin_lid",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_tin__tin_lid.webp",
+   "rect": [
+    473,
+    119,
+    790,
+    242
+   ],
+   "pivot": null
+  },
+  {
+   "id": "stem",
+   "show": "not f('got_stem')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_tin__stem.webp",
+   "rect": [
+    736,
+    501,
+    260,
+    100
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

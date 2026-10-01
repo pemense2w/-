@@ -1,0 +1,130 @@
+{
+ "id": "c4_watch_a",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_watch_b",
+  "right": "c4_watch_b"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_watch_a__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_watch_a__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "logbook",
+   "rect": [
+    290,
+    486.0,
+    250,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "desk_w",
+   "rect": [
+    250,
+    560,
+    580,
+    260
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "chair",
+   "rect": [
+    890,
+    340,
+    180,
+    480
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_w",
+   "rect": [
+    1130,
+    130,
+    300,
+    460
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "lamp_desk",
+   "rect": [
+    680,
+    420,
+    100,
+    130
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 725,
+   "y": 450,
+   "r": 380,
+   "color": "#ffb050",
+   "when": "era() == 'then'",
+   "intensity": 0.7,
+   "flicker": 0.08,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "logbook",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_watch_a__logbook.webp",
+   "rect": [
+    306,
+    512,
+    244,
+    88
+   ],
+   "pivot": null
+  },
+  {
+   "id": "sleeper_a",
+   "show": "era() == 'then'",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_watch_a__sleeper_a.webp",
+   "rect": [
+    920,
+    304,
+    150,
+    280
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

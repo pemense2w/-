@@ -1,0 +1,86 @@
+{
+ "id": "c4_chain",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_lamp_b",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_chain__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_chain__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "chain_break",
+   "rect": [
+    1090,
+    140,
+    220,
+    700
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "gears_look",
+   "rect": [
+    320,
+    160,
+    800,
+    600
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "chain_new",
+   "show": "f('chain_fixed')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_chain__chain_new.webp",
+   "rect": [
+    1172,
+    140,
+    40,
+    684
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chain_broken",
+   "show": "not f('chain_fixed')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_chain__chain_broken.webp",
+   "rect": [
+    1164,
+    140,
+    73,
+    346
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

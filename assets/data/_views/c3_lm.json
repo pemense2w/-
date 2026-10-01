@@ -1,0 +1,234 @@
+{
+ "id": "c3_lm",
+ "chapter": "c3",
+ "kind": "sheet",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "float_red",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_red.webp",
+   "rect": [
+    58,
+    32,
+    240,
+    380
+   ],
+   "pivot": null
+  },
+  {
+   "id": "float_green",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_green.webp",
+   "rect": [
+    358,
+    32,
+    240,
+    380
+   ],
+   "pivot": null
+  },
+  {
+   "id": "float_pale",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_pale.webp",
+   "rect": [
+    658,
+    32,
+    240,
+    380
+   ],
+   "pivot": null
+  },
+  {
+   "id": "float_yellow",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_yellow.webp",
+   "rect": [
+    958,
+    32,
+    240,
+    380
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tree",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__tree.webp",
+   "rect": [
+    1179,
+    0,
+    421,
+    413
+   ],
+   "pivot": null
+  },
+  {
+   "id": "bottle_tree",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_tree.webp",
+   "rect": [
+    1294,
+    136,
+    108,
+    152
+   ],
+   "pivot": null
+  },
+  {
+   "id": "buoy",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__buoy.webp",
+   "rect": [
+    106,
+    576,
+    224,
+    375
+   ],
+   "pivot": null
+  },
+  {
+   "id": "reeds",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__reeds.webp",
+   "rect": [
+    483,
+    574,
+    447,
+    389
+   ],
+   "pivot": null
+  },
+  {
+   "id": "bottle_reeds",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_reeds.webp",
+   "rect": [
+    641,
+    803,
+    171,
+    134
+   ],
+   "pivot": null
+  },
+  {
+   "id": "deep",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__deep.webp",
+   "rect": [
+    826,
+    676,
+    444,
+    324
+   ],
+   "pivot": null
+  },
+  {
+   "id": "mast",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__mast.webp",
+   "rect": [
+    946,
+    546,
+    204,
+    398
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_mast",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__heron_mast.webp",
+   "rect": [
+    987,
+    310,
+    174,
+    347
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_frag",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__heron_frag.webp",
+   "rect": [
+    987,
+    200,
+    225,
+    457
+   ],
+   "pivot": null
+  },
+  {
+   "id": "landing",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__landing.webp",
+   "rect": [
+    1166,
+    436,
+    404,
+    518
+   ],
+   "pivot": null
+  },
+  {
+   "id": "post",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__post.webp",
+   "rect": [
+    1169,
+    738,
+    108,
+    186
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": null,
+ "ambient": null
+}

@@ -1,0 +1,116 @@
+{
+ "id": "c4_quarters_b",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_quarters_a",
+  "right": "c4_quarters_a"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_quarters_b__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_quarters_b__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "drawer",
+   "rect": [
+    180,
+    580,
+    480,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "chest",
+   "rect": [
+    160,
+    440,
+    520,
+    380
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "calendar",
+   "rect": [
+    840,
+    200,
+    260,
+    330
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "wardrobe",
+   "rect": [
+    1240,
+    160,
+    300,
+    660
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "stairs_up",
+   "rect": [
+    720,
+    380,
+    90,
+    440
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "stairs_down",
+   "rect": [
+    720,
+    700,
+    90,
+    120
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "cal_circle",
+   "show": "era() == 'then'",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_quarters_b__cal_circle.webp",
+   "rect": [
+    968,
+    448,
+    44,
+    44
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

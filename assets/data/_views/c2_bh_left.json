@@ -1,0 +1,261 @@
+{
+ "id": "c2_bh_left",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_bh_door",
+  "right": "c2_bh_back"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_bh_left.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hook_left",
+   "rect": [
+    740,
+    110,
+    150,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "net_tangle",
+   "rect": [
+    140,
+    500,
+    380,
+    400
+   ],
+   "when": "not f('got_net')",
+   "kind": null
+  },
+  {
+   "id": "tackle",
+   "rect": [
+    640,
+    590,
+    230,
+    130
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "tar_pot",
+   "rect": [
+    910,
+    610,
+    150,
+    110
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bottle",
+   "rect": [
+    1130,
+    190,
+    260,
+    140
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "jar",
+   "rect": [
+    1360,
+    580,
+    110,
+    150
+   ],
+   "when": "not f('got_jar')",
+   "kind": null
+  },
+  {
+   "id": "gear_s",
+   "rect": [
+    1190,
+    560,
+    120,
+    100
+   ],
+   "when": "not f('got_gear_s')",
+   "kind": null
+  },
+  {
+   "id": "plank",
+   "rect": [
+    280,
+    926.0,
+    210,
+    88
+   ],
+   "when": "not f('plank_lifted')",
+   "kind": null
+  },
+  {
+   "id": "frag3",
+   "rect": [
+    320,
+    936.0,
+    130,
+    88
+   ],
+   "when": "f('plank_lifted') and not f('got_frag3')",
+   "kind": null
+  },
+  {
+   "id": "bench",
+   "rect": [
+    480,
+    686.0,
+    1000,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "pegboard",
+   "rect": [
+    200,
+    200,
+    520,
+    280
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 836,
+   "y": 330,
+   "r": 1250,
+   "color": "#ffb860",
+   "when": "fs('hung') == 'left'",
+   "intensity": 1.1,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "lantern_hung",
+   "show": "fs('hung') == 'left'",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c2/c2_bh_left__lantern_hung.webp",
+   "rect": [
+    779,
+    173,
+    150,
+    217
+   ],
+   "pivot": null
+  },
+  {
+   "id": "net_tangle",
+   "show": "not f('got_net')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_left__net_tangle.webp",
+   "rect": [
+    150,
+    488,
+    380,
+    442
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tar_shine",
+   "show": "fs('hung') == 'left'",
+   "fx": "pulse",
+   "z": 0,
+   "tex": "c2/c2_bh_left__tar_shine.webp",
+   "rect": [
+    940,
+    628,
+    60,
+    16
+   ],
+   "pivot": null
+  },
+  {
+   "id": "gear_s",
+   "show": "not f('got_gear_s')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_left__gear_s.webp",
+   "rect": [
+    1199,
+    553,
+    138,
+    142
+   ],
+   "pivot": null
+  },
+  {
+   "id": "jar_pell",
+   "show": "not f('got_jar')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c2/c2_bh_left__jar_pell.webp",
+   "rect": [
+    1336,
+    542,
+    174,
+    214
+   ],
+   "pivot": null
+  },
+  {
+   "id": "plank_open",
+   "show": "f('plank_lifted')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_left__plank_open.webp",
+   "rect": [
+    296,
+    926,
+    304,
+    74
+   ],
+   "pivot": null
+  },
+  {
+   "id": "frag3",
+   "show": "f('plank_lifted') and not f('got_frag3')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_left__frag3.webp",
+   "rect": [
+    336,
+    956,
+    132,
+    44
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(fs('hung') == 'left', 0.14, 0.97)",
+ "ambient": "#2c3b46"
+}

@@ -174,6 +174,7 @@ class View:
         self.texts = []
         self.widgets = []
         self.sprites = {}            # id -> dict(show, pivot, shadow, group)
+        self.refs = []               # placed copies of sprites from another (sheet) view
         self.variants = {}           # name -> when expr
         self.variant_default = None
         self._group = "bg"
@@ -246,6 +247,10 @@ class View:
         self.variants = mapping
         self.variant_default = default
 
+    def ref(self, id, sheet, sid, x, y, scale=1.0, show=None, alpha=1.0, anchor="bc", fx=None, tint=None):
+        """place a sprite that lives in another view (a sheet), e.g. landmarks reused in four views"""
+        self.refs.append(dict(id=id, sheet=sheet, sid=sid, x=x, y=y, scale=scale, show=show, alpha=alpha, anchor=anchor, fx=fx, tint=tint))
+
     # --- semantic data -----------------------------------------------------
     def hot(self, id, geom, when=None, min_size=88, label=None, kind=None, poly_hit=False):
         if isinstance(geom, (tuple, list)):
@@ -285,12 +290,26 @@ class View:
         return h.hexdigest()
 
     # --- export ------------------------------------------------------------
+    def _ref_json(self):
+        out = []
+        for r in self.refs:
+            mp = os.path.join(OUT_DATA, "_views", r["sheet"] + ".json")
+            if not os.path.exists(mp):
+                continue
+            sh = json.load(open(mp))
+            sd = next((s for s in sh["sprites"] if s["id"] == r["sid"] and "tex" in s), None)
+            if sd is None:
+                continue
+            out.append(dict(id=r["id"], show=r["show"], fx=r["fx"], z=0, tex=sd["tex"], rect=[0, 0, sd["rect"][2], sd["rect"][3]],
+                            pivot=None, ref=True, pos=[r["x"], r["y"]], anchor=r["anchor"], scale=r["scale"], alpha=r["alpha"], tint=r["tint"]))
+        return out
+
     def to_json(self, sprite_meta, bg_files):
         return dict(
             id=self.id, chapter=self.chapter, kind=self.kind, size=list(self.size), nav=self.nav,
             bg=bg_files, hotspots=self.hotspots, lights=self.lights, texts=self.texts, widgets=self.widgets,
             sprites=[dict(id=k, show=v["show"], fx=v["fx"], z=v["z"], **sprite_meta.get(k, {})) for k, v in self.sprites.items()
-                     if k in sprite_meta],
+                     if k in sprite_meta] + self._ref_json(),
             meta=self.meta, dark=self.dark, ambient=self.ambient,
         )
 

@@ -1,0 +1,214 @@
+{
+ "id": "c2_jetty_end",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_jetty",
+  "right": "c2_jetty"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_jetty_end.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "piling",
+   "rect": [
+    850,
+    370,
+    120,
+    460
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "heron",
+   "rect": [
+    820,
+    40,
+    220,
+    360
+   ],
+   "when": "not f('heron_aside')",
+   "kind": null
+  },
+  {
+   "id": "heron",
+   "rect": [
+    1060,
+    160,
+    200,
+    380
+   ],
+   "when": "f('heron_aside') and not f('heron_fed2')",
+   "kind": null
+  },
+  {
+   "id": "oar2",
+   "rect": [
+    740,
+    230,
+    100,
+    560
+   ],
+   "when": "f('heron_aside') and not f('got_oar2')",
+   "kind": null
+  },
+  {
+   "id": "heron_back",
+   "rect": [
+    440,
+    160,
+    200,
+    460
+   ],
+   "when": "f('heron_fed2') and not f('got_frag4')",
+   "kind": null
+  },
+  {
+   "id": "frag4",
+   "rect": [
+    580,
+    231.0,
+    90,
+    88
+   ],
+   "when": "f('heron_fed2') and not f('got_frag4')",
+   "kind": null
+  },
+  {
+   "id": "heron_calm",
+   "rect": [
+    440,
+    160,
+    200,
+    460
+   ],
+   "when": "f('got_frag4')",
+   "kind": null
+  },
+  {
+   "id": "end_water",
+   "rect": [
+    1250,
+    600,
+    350,
+    380
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "far_light",
+   "rect": [
+    1150,
+    380,
+    100,
+    150
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "oar2",
+   "show": "f('heron_aside') and not f('got_oar2')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_jetty_end__oar2.webp",
+   "rect": [
+    742,
+    246,
+    129,
+    608
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oar2_hidden",
+   "show": "not f('heron_aside')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_jetty_end__oar2_hidden.webp",
+   "rect": [
+    742,
+    246,
+    129,
+    608
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_guard",
+   "show": "not f('heron_aside')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c2/c2_jetty_end__heron_guard.webp",
+   "rect": [
+    871,
+    96,
+    162,
+    345
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_aside",
+   "show": "f('heron_aside') and not f('heron_fed2')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c2/c2_jetty_end__heron_aside.webp",
+   "rect": [
+    1034,
+    232,
+    162,
+    345
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_frag",
+   "show": "f('heron_fed2') and not f('got_frag4')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c2/c2_jetty_end__heron_frag.webp",
+   "rect": [
+    477,
+    248,
+    211,
+    409
+   ],
+   "pivot": null
+  },
+  {
+   "id": "heron_calm",
+   "show": "f('got_frag4')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c2/c2_jetty_end__heron_calm.webp",
+   "rect": [
+    477,
+    312,
+    162,
+    345
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.18",
+ "ambient": "#40586a"
+}

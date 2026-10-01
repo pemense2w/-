@@ -1,0 +1,100 @@
+{
+ "id": "c4_door",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c4/c4_door.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "door_lock",
+   "rect": [
+    800,
+    660,
+    140,
+    140
+   ],
+   "when": "not f('door_open')",
+   "kind": null
+  },
+  {
+   "id": "door",
+   "rect": [
+    684,
+    548,
+    232,
+    352
+   ],
+   "when": "not f('door_open')",
+   "kind": null
+  },
+  {
+   "id": "enter",
+   "rect": [
+    684,
+    548,
+    232,
+    352
+   ],
+   "when": "f('door_open')",
+   "kind": null
+  },
+  {
+   "id": "tower",
+   "rect": [
+    480,
+    40,
+    640,
+    500
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "rocks",
+   "rect": [
+    0,
+    860,
+    500,
+    140
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "door_open",
+   "show": "f('door_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_door__door_open.webp",
+   "rect": [
+    626,
+    544,
+    330,
+    400
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.22",
+ "ambient": "#3a4a58"
+}

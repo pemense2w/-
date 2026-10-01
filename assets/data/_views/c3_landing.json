@@ -1,0 +1,121 @@
+{
+ "id": "c3_landing",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_landing.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "post_hit",
+   "rect": [
+    1130,
+    700,
+    140,
+    200
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "moor",
+   "kind": "moor",
+   "rect": [
+    300,
+    300,
+    1200,
+    560
+   ],
+   "when": null,
+   "args": {
+    "target": [
+     1205,
+     800
+    ],
+    "flag": "moored"
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "rope_line",
+   "show": "f('moored')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_landing__rope_line.webp",
+   "rect": [
+    311,
+    751,
+    894,
+    138
+   ],
+   "pivot": null
+  },
+  {
+   "id": "landing_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__landing.webp",
+   "rect": [
+    0,
+    0,
+    404,
+    518
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    1000,
+    860
+   ],
+   "anchor": "bc",
+   "scale": 1.5,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "post_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__post.webp",
+   "rect": [
+    0,
+    0,
+    108,
+    186
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    1000,
+    860
+   ],
+   "anchor": "bc",
+   "scale": 1.5,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#334756"
+}

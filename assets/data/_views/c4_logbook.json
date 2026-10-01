@@ -1,0 +1,183 @@
+{
+ "id": "c4_logbook",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_watch_a",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_logbook__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_logbook__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "log_page",
+   "rect": [
+    790,
+    90,
+    520,
+    820
+   ],
+   "when": "era() == 'then'",
+   "kind": null
+  },
+  {
+   "id": "log_torn",
+   "rect": [
+    790,
+    90,
+    520,
+    820
+   ],
+   "when": "era() == 'now'",
+   "kind": null
+  },
+  {
+   "id": "log_left",
+   "rect": [
+    290,
+    90,
+    520,
+    820
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "log_h",
+   "key": "world.log_head",
+   "rect": [
+    830,
+    100,
+    460,
+    60
+   ],
+   "size": 38,
+   "color": "#2a1a0c",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": "era() == 'then'",
+   "literal": null,
+   "spacing": 3,
+   "outline": null
+  },
+  {
+   "id": "log_1",
+   "key": "world.log_1",
+   "rect": [
+    840,
+    170,
+    440,
+    120
+   ],
+   "size": 27,
+   "color": "#2a1a0c",
+   "rot": 0,
+   "font": "world",
+   "align": "left",
+   "when": "era() == 'then'",
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  },
+  {
+   "id": "log_2",
+   "key": "world.log_2",
+   "rect": [
+    840,
+    300,
+    440,
+    160
+   ],
+   "size": 27,
+   "color": "#2a1a0c",
+   "rot": 0,
+   "font": "world",
+   "align": "left",
+   "when": "era() == 'then'",
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  },
+  {
+   "id": "log_3",
+   "key": "world.log_3",
+   "rect": [
+    840,
+    560,
+    440,
+    120
+   ],
+   "size": 27,
+   "color": "#2a1a0c",
+   "rot": 0,
+   "font": "world",
+   "align": "left",
+   "when": "era() == 'then'",
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  },
+  {
+   "id": "log_4",
+   "key": "world.log_4",
+   "rect": [
+    840,
+    700,
+    440,
+    130
+   ],
+   "size": 27,
+   "color": "#2a1a0c",
+   "rot": 0,
+   "font": "world",
+   "align": "left",
+   "when": "era() == 'then'",
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  },
+  {
+   "id": "log_old",
+   "key": "world.log_old",
+   "rect": [
+    310,
+    110,
+    480,
+    60
+   ],
+   "size": 34,
+   "color": "#3a3a30",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": "era() == 'now'",
+   "literal": null,
+   "spacing": 2,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

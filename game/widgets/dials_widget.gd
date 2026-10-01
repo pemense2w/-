@@ -16,6 +16,19 @@ func _build() -> void:
 		if not G.s.flags.has(prefix + str(i)):
 			G.s.flags[prefix + str(i)] = int(init[i]) if i < init.size() else (i * 2 + 3) % symbols.size()
 		var c: Array = cells[i]
+		if args.get("digits", false):
+			var lb := Label.new()
+			lb.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			lb.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+			lb.position = Vector2(c[0], c[1]) - position
+			lb.size = Vector2(c[2], c[3])
+			lb.add_theme_font_override("font", Fonts.world())
+			lb.add_theme_font_size_override("font_size", 120)
+			lb.add_theme_color_override("font_color", Color("#efe5c6"))
+			lb.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			add_child(lb)
+			faces.append(lb)
+			continue
 		var tr := TextureRect.new()
 		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -62,8 +75,10 @@ func _check() -> void:
 func refresh() -> void:
 	for i in faces.size():
 		var nm: String = symbols[G.fi(prefix + str(i))]
-		var t := ViewNode.tex(_glyph_path(nm))
-		faces[i].texture = t
+		if args.get("digits", false):
+			faces[i].text = nm
+		else:
+			faces[i].texture = ViewNode.tex(_glyph_path(nm))
 
 func _glyph_path(nm: String) -> String:
 	var v = G.views.get("ui_glyphs", {})

@@ -64,13 +64,24 @@ func setup(d: Dictionary) -> void:
 		n.texture = tex(sd.tex)
 		var r: Array = sd.rect
 		var pv = sd.get("pivot", null)
-		if pv != null:
+		if sd.get("ref", false):
+			# a copy of a sprite from a sheet view, placed by anchor point and scale
+			var p: Array = sd.pos
+			n.position = Vector2(p[0], p[1])
+			n.scale = Vector2.ONE * float(sd.get("scale", 1.0))
+			n.offset = Vector2(-r[2] / 2.0, -r[3] if sd.get("anchor", "bc") == "bc" else -r[3] / 2.0)
+			var tcol := Color.WHITE
+			if sd.get("tint", null) != null:
+				tcol = Color(sd.tint)
+			tcol.a = float(sd.get("alpha", 1.0))
+			n.modulate = tcol
+		elif pv != null:
 			n.position = Vector2(pv[0], pv[1])
 			n.offset = Vector2(r[0] - pv[0], r[1] - pv[1])
 		else:
 			n.position = Vector2(r[0], r[1])
 		add_child(n)
-		spr[sd.id] = {"n": n, "d": sd, "base": n.position, "phase": randf() * TAU}
+		spr[sd.id] = {"n": n, "d": sd, "base": n.position, "phase": randf() * TAU, "mod": n.modulate}
 	for hd in d.get("hotspots", []):
 		var h := Hotspot.new()
 		h.hid = hd.id
@@ -124,6 +135,28 @@ func _on_fx(name: String, data: Dictionary) -> void:
 				n.modulate.a = 0.35
 				tw.tween_interval(0.5)
 				tw.tween_property(n, "modulate:a", 1.0, 0.25)
+		"startle":
+			# the one startle moment: a hard cut, a flash and a jolt (see settings: Startle moments)
+			var fl := ColorRect.new()
+			fl.color = Color(1, 1, 1, 0.8)
+			fl.size = size
+			fl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			add_child(fl)
+			var tw := create_tween()
+			tw.tween_property(fl, "color:a", 0.0, 0.5)
+			tw.tween_callback(fl.queue_free)
+			var tw2 := create_tween()
+			for i in 6:
+				tw2.tween_property(self, "position", Vector2(randf_range(-14, 14), randf_range(-10, 10)), 0.04)
+			tw2.tween_property(self, "position", Vector2.ZERO, 0.05)
+		"buoy_again":
+			for wi in wids:
+				if wi.n.has_method("replay"):
+					wi.n.replay()
+		"slowfade":
+			modulate.a = 0.0
+			var tw3 := create_tween()
+			tw3.tween_property(self, "modulate:a", 1.0, float(data.get("secs", 4.0)))
 		"shake":
 			var n := get_sprite(str(data.get("sprite", "")))
 			if n:
@@ -140,10 +173,14 @@ func get_sprite(id: String) -> Sprite2D:
 	return spr[id].n if spr.has(id) else null
 
 func get_hotspot(id: String) -> Hotspot:
+	var first: Hotspot = null
 	for h in hots:
 		if h.d.id == id:
-			return h.n
-	return null
+			if h.n.visible:
+				return h.n
+			if first == null:
+				first = h.n
+	return first
 
 func refresh() -> void:
 	# background variant: first match wins (default variant last)
@@ -218,6 +255,12 @@ func _process(delta: float) -> void:
 				n.rotation_degrees = float(G.fi("clock_h")) * 30.0 + float(G.fi("clock_m")) * 0.5
 			"hand_m":
 				n.rotation_degrees = float(G.fi("clock_m")) * 6.0
+			"lowerable":
+				var target := 120.0 if G.f("boat_lowered") else 0.0
+				if not e.has("cur"):
+					e["cur"] = target
+				e.cur = target if (G.test_mode or calm) else move_toward(e.cur, target, delta * 90.0)
+				n.position.y = e.base.y + e.cur
 			"mhand_h":
 				n.rotation_degrees = -(float(G.fi("mclock_h")) * 30.0 + float(G.fi("mclock_m")) * 0.5)
 			"mhand_m":

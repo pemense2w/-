@@ -1,5 +1,48 @@
 [
- {"id": "clock_fish", "ch": 1, "sketch": "clock_fish", "title": "nb.clock_fish.title", "text": "nb.clock_fish.text", "alt": {"when": "f('clock_set')", "key": "nb.clock_fish.text2"}},
- {"id": "floats", "ch": 1, "sketch": "floats", "title": "nb.floats.title", "text": "nb.floats.text"},
- {"id": "shapes", "ch": 1, "sketch": "shapes", "title": "nb.shapes.title", "text": "nb.shapes.text"}
+ {
+  "id": "clock_fish",
+  "ch": 1,
+  "sketch": "clock_fish",
+  "title": "nb.clock_fish.title",
+  "text": "nb.clock_fish.text",
+  "alt": {
+   "when": "f('clock_set')",
+   "key": "nb.clock_fish.text2"
+  }
+ },
+ {
+  "id": "floats",
+  "ch": 1,
+  "sketch": "floats",
+  "title": "nb.floats.title",
+  "text": "nb.floats.text"
+ },
+ {
+  "id": "shapes",
+  "ch": 1,
+  "sketch": "shapes",
+  "title": "nb.shapes.title",
+  "text": "nb.shapes.text"
+ },
+ {
+  "id": "tide",
+  "ch": 2,
+  "sketch": "tide",
+  "title": "nb.tide.title",
+  "text": "nb.tide.text"
+ },
+ {
+  "id": "bell",
+  "ch": 3,
+  "sketch": "bell",
+  "title": "nb.bell.title",
+  "text": "nb.bell.text"
+ },
+ {
+  "id": "valves",
+  "ch": 4,
+  "sketch": "valves",
+  "title": "nb.valves.title",
+  "text": "nb.valves.text"
+ }
 ]

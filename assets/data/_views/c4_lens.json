@@ -1,0 +1,109 @@
+{
+ "id": "c4_lens",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_lamp_a",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_lens__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_lens__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lens_look",
+   "rect": [
+    300,
+    160,
+    780,
+    780
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "lens_in",
+   "key": "world.lens_flame",
+   "rect": [
+    150,
+    680,
+    200,
+    40
+   ],
+   "size": 20,
+   "color": "#e6dcc0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  },
+  {
+   "id": "lens_out",
+   "key": "world.lens_sea",
+   "rect": [
+    1090,
+    100,
+    300,
+    40
+   ],
+   "size": 20,
+   "color": "#e6dcc0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 0,
+   "outline": null
+  }
+ ],
+ "widgets": [
+  {
+   "id": "beam",
+   "kind": "beam",
+   "rect": [
+    330,
+    190,
+    720,
+    720
+   ],
+   "when": null,
+   "args": {
+    "cell": 240,
+    "origin": [
+     330,
+     190
+    ],
+    "flag": "lens_ok",
+    "source": [
+     210,
+     590
+    ]
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

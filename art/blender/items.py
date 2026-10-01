@@ -101,3 +101,147 @@ def _ticket(v):
     v.ink(rot(rect(94, 160, 100, 12), 8, origin=(195, 195)), "#7a2a22")
     v.ink(rot(rect(94, 190, 200, 8), 8, origin=(195, 195)), INK)
     v.ink(rot(rect(94, 214, 150, 8), 8, origin=(195, 195)), INK)
+
+@item("pell_jar")
+def _pell_jar(v):
+    v.layer(1)
+    v.add(jar_shape(110, 70, 170, 230), "#a9c6c6")
+    v.ink(jar_shape(124, 86, 142, 198), "#2f6f80")
+    v.add(rect(124, 56, 142, 26, 6), "#a8825a")
+    pell_fish(v, 196, 200, 0.62, facing=1)
+
+@item("rag")
+def _rag(v):
+    v.layer(1)
+    v.add(poly([(110, 140), (270, 110), (300, 210), (260, 290), (150, 300), (100, 230)]), "#cfc4a3")
+    v.ink(poly([(140, 170), (250, 150), (270, 220), (190, 270)]), "#bdb08c")
+    v.ink(line([(130, 220), (240, 190)], 7), "#7a6b4a")
+
+@item("tar")
+def _tar(v):
+    v.layer(1)
+    v.add(poly([(110, 270), (280, 270), (300, 170), (90, 170)]), IRON)
+    v.add(ellipse(195, 170, 105, 30), "#1d1815")
+    v.ink(ellipse(180, 164, 45, 8), "#6a5a4a")
+    v.add(arc(195, 170, 105, 180, 360, 12), IRON)
+
+@item("patch")
+def _patch(v):
+    v.layer(1)
+    v.add(ellipse(192, 192, 110, 86), "#1d1815")
+    for k in range(5):
+        v.ink(line([(110 + k * 40, 130), (118 + k * 40, 256)], 5), "#38302a")
+    v.ink(ellipse(192, 192, 100, 76), "#26201c")
+
+@item("corkscrew")
+def _corkscrew(v):
+    v.layer(1)
+    v.add(line([(192, 130), (192, 310)], 16), IRON)
+    for k in range(6):
+        v.add(line([(150 + (k % 2) * 84, 170 + k * 22), (234 - (k % 2) * 84, 186 + k * 22)], 12), IRON)
+    v.add(rect(130, 90, 124, 30, 10), "#a8825a")
+
+@item("net")
+def _net(v):
+    v.layer(1)
+    v.add(arc(192, 130, 110, 180, 360, 12), ROPE)
+    for k in range(-4, 5):
+        v.add(line([(192 + k * 24, 130), (192 + k * 14, 290)], 6), ROPE)
+    for k in range(4):
+        v.add(arc(192, 140 + k * 40, 100 - k * 22, 0, 180, 6), ROPE)
+    v.add(line([(192, 130), (192, 50)], 12), "#8a6a46")
+
+@item("small_fish")
+def _fish(v):
+    v.layer(1)
+    v.add(ellipse(180, 192, 100, 48), "#c3d3d6")
+    v.add(poly([(260, 192), (330, 140), (330, 244)]), "#a9bcc0")
+    v.ink(ellipse(120, 182, 9, 9), INK)
+    v.ink(line([(130, 214), (240, 206)], 5), "#8fa6ab")
+
+@item("oar2")
+def _oar2(v):
+    v.layer(1)
+    v.add(rot(rect(180, 40, 24, 300, 8), -35), "#8a6a46")
+    v.add(rot(rect(140, 200, 100, 140, 40), -35, origin=(190, 190)), "#a68359")
+
+def _gear_item(v, r, t):
+    v.layer(1)
+    v.add(gear_shape(192, 192, r, t, r * 0.2), "#b88a3a")
+    v.ink(ring(192, 192, r * 0.34, r * 0.2), "#7a5a22")
+
+from ch2 import gear_shape, IRON, ROPE
+@item("gear_s")
+def _g1(v):
+    _gear_item(v, 62, 9)
+
+@item("gear_m")
+def _g2(v):
+    _gear_item(v, 98, 14)
+
+@item("gear_l")
+def _g3(v):
+    _gear_item(v, 140, 20)
+
+@item("lhkey")
+def _lhkey(v):
+    v.layer(1)
+    key(v, 150, 200, 2.6, ang=-35, color="#9aa4a6")
+    v.add(poly([(250, 270), (320, 250), (330, 300), (262, 320)]), "#c9a24d")
+
+@item("tomas_note")
+def _tnote(v):
+    v.layer(1)
+    paper_sheet(v, 100, 70, 190, 250, "#d9cfae", ang=6, d=1, lines=5)
+    v.ink(ellipse(150, 280, 40, 26), "#b8aa88")
+    v.ink(ellipse(250, 120, 26, 18), "#b8aa88")
+
+def _watch(v, working):
+    v.layer(1)
+    v.add(ring(192, 120, 40, 22), BRASS)
+    v.add(ellipse(192, 215, 120), BRASS_D)
+    v.add(ellipse(192, 215, 106), BRASS)
+    v.add(ellipse(192, 215, 92), "#e8dec2")
+    for i in range(12):
+        a = math.radians(i * 30)
+        v.ink(line([(192 + 80 * math.sin(a), 215 - 80 * math.cos(a)), (192 + 70 * math.sin(a), 215 - 70 * math.cos(a))], 4), INK)
+    # hands: both pointing near 4:19
+    v.ink(line([(192, 215), (192 + 38 * math.sin(math.radians(130)), 215 - 38 * math.cos(math.radians(130)))], 7), INK)
+    v.ink(line([(192, 215), (192 + 66 * math.sin(math.radians(114)), 215 - 66 * math.cos(math.radians(114)))], 5), INK)
+    v.ink(ellipse(192, 215, 7, 7), BRASS_D)
+    if not working:
+        v.ink(poly([(204, 130), (292, 215), (270, 240), (180, 150)]), "#00000000" if False else shade("#e8dec2", -0.2))
+        v.ink(line([(120, 150), (160, 190)], 5), "#6a5a3a")
+        v.ink(line([(260, 160), (230, 200)], 5), "#6a5a3a")
+        v.ink(line([(170, 160), (215, 280)], 4), "#6a5a3a")
+
+@item("watch")
+def _w1(v):
+    _watch(v, False)
+
+@item("pocket_watch")
+def _w2(v):
+    _watch(v, True)
+
+@item("stem")
+def _stem(v):
+    v.layer(1)
+    v.add(rect(110, 182, 170, 24, 8), BRASS)
+    v.add(ellipse(290, 194, 30, 30), BRASS)
+    v.add(rect(88, 174, 34, 40, 6), BRASS_D)
+    v.ink(rect(130, 186, 100, 4), BRASS_D)
+
+@item("oilcan")
+def _oilcan(v):
+    v.layer(1)
+    v.add(poly([(100, 290), (240, 290), (264, 180), (76, 180)]), "#a8abad")
+    v.add(rect(150, 140, 30, 44), "#a8abad")
+    v.add(line([(240, 220), (320, 160), (336, 110)], 16), "#a8abad")
+    v.add(arc(100, 235, 44, 90, 270, 10), "#a8abad")
+    v.ink(rect(110, 225, 120, 10), "#7a7e80")
+
+@item("chain")
+def _chain(v):
+    v.layer(1)
+    for k in range(9):
+        v.add(ring(110 + k * 22, 190 + math.sin(k * 0.7) * 40, 26, 11), "#8a8e90")

@@ -1,0 +1,90 @@
+{
+ "id": "c2_net",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_left",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_net.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "net_look",
+   "rect": [
+    380,
+    170,
+    760,
+    760
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "net_item",
+   "rect": [
+    520,
+    330,
+    480,
+    340
+   ],
+   "when": "f('net_untangled') and not f('got_net')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "tiles",
+   "kind": "tiles",
+   "rect": [
+    400,
+    190,
+    720,
+    720
+   ],
+   "when": null,
+   "args": {
+    "cell": 240,
+    "origin": [
+     400,
+     190
+    ],
+    "flag": "net_untangled",
+    "tex_s": "c2/c2_net_tile__tile_s.webp",
+    "tex_c": "c2/c2_net_tile__tile_c.webp",
+    "tex_b": "c2/c2_net_tile__tile_b.webp"
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "net_done",
+   "show": "f('net_untangled') and not f('got_net')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_net__net_done.webp",
+   "rect": [
+    516,
+    326,
+    524,
+    388
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2c3b46"
+}

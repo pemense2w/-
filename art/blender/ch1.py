@@ -6,7 +6,7 @@ from kit import *
 
 CH = "c1"
 WALL_T, WALL_B = "#4b6c68", "#3c5855"
-DARK = "0.46 if not f('lantern_placed') else 0.2"
+DARK = "pick(f('lantern_placed'), 0.2, 0.46)"
 AMBIENT = "#3a4d5c"
 
 def new(id, **kw):

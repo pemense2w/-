@@ -37,6 +37,16 @@ func use(h: String, item: String) -> bool:
 func combine(_a: String, _b: String) -> bool:
 	return false
 
+## chapter-specific helpers that scene expressions may call through G (Chapter 3 uses them for fog and position)
+func near(_what: String, _dir: String) -> bool:
+	return false
+
+func here(_what: String) -> bool:
+	return false
+
+func here_any() -> bool:
+	return false
+
 func widget_event(_wid: String, _ev: String, _data: Dictionary) -> void:
 	pass
 
@@ -54,8 +64,9 @@ func pickup(h: String, flag: String, item: String, text_key: String = "") -> voi
 	reg(h, func():
 		if G.f(flag):
 			return false
+		if not G.give(item):
+			return true        # satchel full: it stays where it is (G.give says so)
 		G.setf(flag)
-		G.give(item)
 		if text_key != "":
 			G.say(text_key)
 		return true)

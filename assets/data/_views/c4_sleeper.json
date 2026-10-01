@@ -1,0 +1,125 @@
+{
+ "id": "c4_sleeper",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_watch_a",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_sleeper__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_sleeper__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "sleeper",
+   "rect": [
+    420,
+    260,
+    460,
+    580
+   ],
+   "when": "era() == 'then'",
+   "kind": null
+  },
+  {
+   "id": "chair_empty",
+   "rect": [
+    420,
+    260,
+    460,
+    580
+   ],
+   "when": "era() == 'now'",
+   "kind": null
+  },
+  {
+   "id": "window_sl",
+   "rect": [
+    1020,
+    80,
+    400,
+    600
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 1220,
+   "y": 360,
+   "r": 520,
+   "color": "#ffb050",
+   "when": "era() == 'then'",
+   "intensity": 0.6,
+   "flicker": 0.1,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "sleeper_body",
+   "show": "era() == 'then'",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_sleeper__sleeper_body.webp",
+   "rect": [
+    426,
+    396,
+    464,
+    488
+   ],
+   "pivot": null
+  },
+  {
+   "id": "sleeper_head",
+   "show": "era() == 'then'",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_sleeper__sleeper_head.webp",
+   "rect": [
+    580,
+    252,
+    196,
+    216
+   ],
+   "pivot": [
+    660,
+    370
+   ]
+  },
+  {
+   "id": "sleeper_face",
+   "show": "era() == 'then' and f('sleeper_turned')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_sleeper__sleeper_face.webp",
+   "rect": [
+    581,
+    220,
+    194,
+    250
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

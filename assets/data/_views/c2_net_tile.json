@@ -1,0 +1,66 @@
+{
+ "id": "c2_net_tile",
+ "chapter": "c2",
+ "kind": "sheet",
+ "size": [
+  1000,
+  300
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "tile_s",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_net_tile__tile_s.webp",
+   "rect": [
+    15,
+    26,
+    270,
+    248
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tile_c",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_net_tile__tile_c.webp",
+   "rect": [
+    346,
+    15,
+    259,
+    259
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tile_b",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_net_tile__tile_b.webp",
+   "rect": [
+    666,
+    26,
+    248,
+    248
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": null,
+ "ambient": null
+}

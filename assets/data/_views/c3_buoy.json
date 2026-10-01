@@ -1,0 +1,82 @@
+{
+ "id": "c3_buoy",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_buoy.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "buoy_body",
+   "rect": [
+    560,
+    200,
+    480,
+    620
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "rhythm",
+   "kind": "rhythm",
+   "rect": [
+    200,
+    560,
+    1200,
+    420
+   ],
+   "when": null,
+   "args": {
+    "mode": "listen",
+    "cx": 800,
+    "cy": 800
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "buoy_big",
+   "show": null,
+   "fx": "sway",
+   "z": 0,
+   "tex": "c3/c3_lm__buoy.webp",
+   "rect": [
+    0,
+    0,
+    224,
+    375
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    860
+   ],
+   "anchor": "bc",
+   "scale": 1.9,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#334756"
+}

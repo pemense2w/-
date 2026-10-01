@@ -1,0 +1,56 @@
+{
+ "id": "c2_hull",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_right",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_hull.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hole",
+   "rect": [
+    600,
+    330,
+    440,
+    340
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "hull_patch",
+   "show": "f('hull_ok')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_hull__hull_patch.webp",
+   "rect": [
+    556,
+    306,
+    564,
+    428
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.06",
+ "ambient": "#2c3b46"
+}

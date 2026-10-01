@@ -1,0 +1,56 @@
+{
+ "id": "c2_gap",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_jetty",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_gap.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "gap_look",
+   "rect": [
+    260,
+    220,
+    1080,
+    560
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "catch",
+   "kind": "catch",
+   "rect": [
+    260,
+    220,
+    1080,
+    560
+   ],
+   "when": null,
+   "args": {
+    "flag": "got_fish_once"
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#40586a"
+}

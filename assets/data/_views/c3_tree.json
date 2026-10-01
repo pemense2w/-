@@ -1,0 +1,99 @@
+{
+ "id": "c3_tree",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_tree.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "tree",
+   "rect": [
+    300,
+    40,
+    1000,
+    800
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bottle",
+   "rect": [
+    610,
+    280,
+    260,
+    320
+   ],
+   "when": "not f('got_tomas_note')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "tree_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__tree.webp",
+   "rect": [
+    0,
+    0,
+    421,
+    413
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    840
+   ],
+   "anchor": "bc",
+   "scale": 2.1,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "bottle_big",
+   "show": "not f('got_tomas_note')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_tree.webp",
+   "rect": [
+    0,
+    0,
+    108,
+    152
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    840
+   ],
+   "anchor": "bc",
+   "scale": 2.1,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#334756"
+}

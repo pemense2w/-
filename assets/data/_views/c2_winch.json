@@ -1,0 +1,170 @@
+{
+ "id": "c2_winch",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_back",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_winch.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "peg_0",
+   "rect": [
+    270,
+    440,
+    120,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "peg_1",
+   "rect": [
+    390,
+    440,
+    120,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "peg_2",
+   "rect": [
+    590,
+    440,
+    120,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "crank",
+   "rect": [
+    150,
+    320,
+    160,
+    160
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "drum",
+   "rect": [
+    1160,
+    250,
+    260,
+    500
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "gears",
+   "kind": "gears",
+   "rect": [
+    130,
+    210,
+    1340,
+    580
+   ],
+   "when": null,
+   "args": {
+    "pegs": [
+     [
+      330,
+      500
+     ],
+     [
+      450,
+      500
+     ],
+     [
+      650,
+      500
+     ]
+    ],
+    "sprites": [
+     "gear_s",
+     "gear_m",
+     "gear_l"
+    ]
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "gear_s",
+   "show": "false",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_winch__gear_s.webp",
+   "rect": [
+    279,
+    449,
+    138,
+    142
+   ],
+   "pivot": [
+    330,
+    500
+   ]
+  },
+  {
+   "id": "gear_m",
+   "show": "false",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_winch__gear_m.webp",
+   "rect": [
+    239,
+    409,
+    218,
+    222
+   ],
+   "pivot": [
+    330,
+    500
+   ]
+  },
+  {
+   "id": "gear_l",
+   "show": "false",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_winch__gear_l.webp",
+   "rect": [
+    199,
+    369,
+    298,
+    302
+   ],
+   "pivot": [
+    330,
+    500
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.06",
+ "ambient": "#2c3b46"
+}

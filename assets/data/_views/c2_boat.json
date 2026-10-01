@@ -1,0 +1,159 @@
+{
+ "id": "c2_boat",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_right",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_boat.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lock_l",
+   "rect": [
+    140,
+    660,
+    120,
+    160
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "lock_r",
+   "rect": [
+    1340,
+    660,
+    120,
+    160
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bow_lamp",
+   "rect": [
+    730,
+    290,
+    140,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "boat_bell",
+   "rect": [
+    20,
+    590,
+    110,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "push_off",
+   "rect": [
+    640,
+    880,
+    320,
+    110
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 350,
+   "r": 520,
+   "color": "#ffb860",
+   "when": "f('bow_lamp')",
+   "intensity": 1.1,
+   "flicker": 0.06,
+   "hole": 1.0
+  }
+ ],
+ "texts": [
+  {
+   "id": "push",
+   "key": "world.push",
+   "rect": [
+    640,
+    892,
+    320,
+    90
+   ],
+   "size": 36,
+   "color": "#e8d8a8",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 4,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "lamp_lit",
+   "show": "f('bow_lamp')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c2/c2_boat__lamp_lit.webp",
+   "rect": [
+    754,
+    314,
+    92,
+    72
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oar_l",
+   "show": "f('oar_l')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_boat__oar_l.webp",
+   "rect": [
+    55,
+    625,
+    756,
+    188
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oar_r",
+   "show": "f('oar_r')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_boat__oar_r.webp",
+   "rect": [
+    825,
+    625,
+    756,
+    188
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#2c3b46"
+}

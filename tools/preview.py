@@ -20,13 +20,24 @@ for vid in args:
     for b in v["bg"]:
         if variant is None or b["variant"] == variant:
             bg = b; break
-    if bg is None: bg = v["bg"][-1]
-    im = Image.open(os.path.join(ART, bg["tex"])).convert("RGBA")
+    if bg is None and v["bg"]: bg = v["bg"][-1]
+    im = Image.open(os.path.join(ART, bg["tex"])).convert("RGBA") if bg else Image.new("RGBA", tuple(v["size"]), (60, 70, 70, 255))
     if not nosp:
         for s in v["sprites"]:
             if "tex" not in s: continue
             sp = Image.open(os.path.join(ART, s["tex"])).convert("RGBA")
-            im.alpha_composite(sp, (int(s["rect"][0]), int(s["rect"][1])))
+            if s.get("ref"):
+                sc = s.get("scale", 1.0)
+                if sc != 1.0: sp = sp.resize((int(sp.size[0] * sc), int(sp.size[1] * sc)))
+                px, py = s["pos"]
+                x0 = int(px - sp.size[0] / 2); y0 = int(py - (sp.size[1] if s.get("anchor", "bc") == "bc" else sp.size[1] / 2))
+                if s.get("alpha", 1.0) < 1.0:
+                    a = sp.split()[3].point(lambda p: int(p * s["alpha"])); sp.putalpha(a)
+                if "--here" in sys.argv and "_near" in s["id"]: continue
+                if "--near" in sys.argv and "_here" in s["id"]: continue
+                tmp = Image.new("RGBA", im.size, (0,0,0,0)); tmp.paste(sp, (x0, y0)); im = Image.alpha_composite(im, tmp)
+            else:
+                im.alpha_composite(sp, (int(s["rect"][0]), int(s["rect"][1])))
     if hot:
         d = ImageDraw.Draw(im, "RGBA")
         for h in v["hotspots"]:

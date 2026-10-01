@@ -1,0 +1,125 @@
+{
+ "id": "c2_bh_back",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_bh_left",
+  "right": "c2_bh_right"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_bh_back.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hook_back",
+   "rect": [
+    740,
+    110,
+    150,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "tide_board",
+   "rect": [
+    260,
+    220,
+    520,
+    420
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "winch",
+   "rect": [
+    980,
+    360,
+    420,
+    480
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "gear_m",
+   "rect": [
+    760,
+    440,
+    180,
+    180
+   ],
+   "when": "not f('got_gear_m')",
+   "kind": null
+  },
+  {
+   "id": "ropes",
+   "rect": [
+    230,
+    730,
+    430,
+    150
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 836,
+   "y": 330,
+   "r": 1250,
+   "color": "#ffb860",
+   "when": "fs('hung') == 'back'",
+   "intensity": 1.1,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "lantern_hung",
+   "show": "fs('hung') == 'back'",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c2/c2_bh_back__lantern_hung.webp",
+   "rect": [
+    779,
+    173,
+    150,
+    217
+   ],
+   "pivot": null
+  },
+  {
+   "id": "gear_m",
+   "show": "not f('got_gear_m')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_back__gear_m.webp",
+   "rect": [
+    769,
+    439,
+    198,
+    202
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(fs('hung') == 'back', 0.14, 0.97)",
+ "ambient": "#2c3b46"
+}

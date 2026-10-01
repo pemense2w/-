@@ -1,0 +1,240 @@
+{
+ "id": "c2_bh_right",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_bh_back",
+  "right": "c2_bh_door"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_bh_right.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hook_right",
+   "rect": [
+    740,
+    110,
+    150,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "boat",
+   "rect": [
+    300,
+    440,
+    1050,
+    420
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "hull_hole",
+   "rect": [
+    560,
+    570,
+    240,
+    260
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "chain_lock",
+   "rect": [
+    1340,
+    540,
+    140,
+    200
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "crate",
+   "rect": [
+    170,
+    640,
+    260,
+    260
+   ],
+   "when": "not f('got_gear_l')",
+   "kind": null
+  },
+  {
+   "id": "gear_l",
+   "rect": [
+    190,
+    660,
+    200,
+    200
+   ],
+   "when": "f('crate_open') and not f('got_gear_l')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 836,
+   "y": 330,
+   "r": 1250,
+   "color": "#ffb860",
+   "when": "fs('hung') == 'right'",
+   "intensity": 1.1,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [
+  {
+   "id": "name",
+   "key": "",
+   "rect": [
+    900,
+    590,
+    300,
+    70
+   ],
+   "size": 44,
+   "color": "#e8d8a8",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": "AGNES",
+   "spacing": 8,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "lantern_hung",
+   "show": "fs('hung') == 'right'",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c2/c2_bh_right__lantern_hung.webp",
+   "rect": [
+    779,
+    173,
+    150,
+    217
+   ],
+   "pivot": null
+  },
+  {
+   "id": "boat",
+   "show": null,
+   "fx": "lowerable",
+   "z": 0,
+   "tex": "c2/c2_bh_right__boat.webp",
+   "rect": [
+    236,
+    426,
+    1184,
+    408
+   ],
+   "pivot": null
+  },
+  {
+   "id": "hull_patch",
+   "show": "f('hull_ok')",
+   "fx": "lowerable",
+   "z": 0,
+   "tex": "c2/c2_bh_right__hull_patch.webp",
+   "rect": [
+    581,
+    598,
+    184,
+    160
+   ],
+   "pivot": null
+  },
+  {
+   "id": "water_front",
+   "show": "f('boat_lowered')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_right__water_front.webp",
+   "rect": [
+    115,
+    802,
+    1370,
+    198
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chain",
+   "show": "not f('chain_free')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_right__chain.webp",
+   "rect": [
+    1352,
+    545,
+    175,
+    211
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chain_fallen",
+   "show": "f('chain_free')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_right__chain_fallen.webp",
+   "rect": [
+    1357,
+    825,
+    150,
+    80
+   ],
+   "pivot": null
+  },
+  {
+   "id": "crate_open",
+   "show": "f('crate_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_right__crate_open.webp",
+   "rect": [
+    176,
+    636,
+    284,
+    108
+   ],
+   "pivot": null
+  },
+  {
+   "id": "gear_l",
+   "show": "f('crate_open') and not f('got_gear_l')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bh_right__gear_l.webp",
+   "rect": [
+    179,
+    649,
+    258,
+    262
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(fs('hung') == 'right', 0.14, 0.97)",
+ "ambient": "#2c3b46"
+}

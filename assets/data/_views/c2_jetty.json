@@ -1,0 +1,96 @@
+{
+ "id": "c2_jetty",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_jetty_end",
+  "right": "c2_jetty_end"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_jetty.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "bh_door",
+   "rect": [
+    1130,
+    400,
+    240,
+    360
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "gap",
+   "rect": [
+    440,
+    726,
+    130,
+    98
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bollard",
+   "rect": [
+    660,
+    671.0,
+    90,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coil",
+   "rect": [
+    130,
+    680,
+    130,
+    100
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "jetty_lamp",
+   "rect": [
+    900,
+    470,
+    100,
+    280
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "jetty_water",
+   "rect": [
+    0,
+    830,
+    600,
+    170
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.18",
+ "ambient": "#40586a"
+}

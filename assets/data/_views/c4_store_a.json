@@ -1,0 +1,133 @@
+{
+ "id": "c4_store_a",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_store_b",
+  "right": "c4_store_b"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_store_a__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_store_a__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "tin",
+   "rect": [
+    500,
+    190,
+    170,
+    140
+   ],
+   "when": "not f('got_stem')",
+   "kind": null
+  },
+  {
+   "id": "shelf",
+   "rect": [
+    160,
+    130,
+    800,
+    700
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "oilcan",
+   "rect": [
+    220,
+    400,
+    240,
+    140
+   ],
+   "when": "era() == 'then' and not f('got_oilcan')",
+   "kind": null
+  },
+  {
+   "id": "barrel",
+   "rect": [
+    1000,
+    590,
+    170,
+    240
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_s",
+   "rect": [
+    1160,
+    130,
+    240,
+    420
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "tin",
+   "show": "not f('got_stem')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_store_a__tin.webp",
+   "rect": [
+    510,
+    218,
+    176,
+    148
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tin_open",
+   "show": "f('got_stem')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_store_a__tin_open.webp",
+   "rect": [
+    516,
+    158,
+    192,
+    208
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oilcan",
+   "show": "era() == 'then' and not f('got_oilcan')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_store_a__oilcan.webp",
+   "rect": [
+    208,
+    370,
+    278,
+    194
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

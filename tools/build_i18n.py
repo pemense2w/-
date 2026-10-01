@@ -33,7 +33,7 @@ for f in glob.glob(os.path.join(ROOT, "game", "**", "*.gd"), recursive=True):
 # world text keys in blender scenes
 for f in glob.glob(os.path.join(ROOT, "art", "blender", "*.py")):
     for k in re.findall(r'v\.text\([^,]+,\s*"([^"]+)"', open(f).read()): used.add(k)
-missing = sorted(k for k in used if k not in en and not any(f"{k}.{n}" in en for n in range(1, 3)) and not k.endswith("."))
+missing = sorted(k for k in used if k not in en and not any(f"{k}.{n}" in en for n in range(1, 3)) and not k.endswith(".") and not k.endswith("_"))
 if missing:
     print("MISSING in en:", len(missing))
     for k in missing: print("  ", k)

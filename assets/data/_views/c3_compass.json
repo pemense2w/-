@@ -1,0 +1,77 @@
+{
+ "id": "c3_compass",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_deck",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_compass.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "compass_card",
+   "rect": [
+    450,
+    150,
+    700,
+    700
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "compass",
+   "kind": "compass",
+   "rect": [
+    370,
+    70,
+    860,
+    860
+   ],
+   "when": null,
+   "args": {
+    "cx": 800,
+    "cy": 500,
+    "sprite": "card",
+    "flag": "compass_ok"
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "card",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_compass__card.webp",
+   "rect": [
+    448,
+    148,
+    704,
+    704
+   ],
+   "pivot": [
+    800,
+    500
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.06",
+ "ambient": "#334756"
+}

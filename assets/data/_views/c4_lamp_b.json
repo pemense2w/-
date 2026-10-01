@@ -1,0 +1,97 @@
+{
+ "id": "c4_lamp_b",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_lamp_a",
+  "right": "c4_lamp_a"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_lamp_b__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_lamp_b__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "chain_mech",
+   "rect": [
+    1220,
+    60,
+    220,
+    760
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "clockwork",
+   "rect": [
+    560,
+    140,
+    640,
+    640
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_lb",
+   "rect": [
+    100,
+    100,
+    240,
+    420
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "chain_broken",
+   "show": "not f('chain_fixed')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_lamp_b__chain_broken.webp",
+   "rect": [
+    1346,
+    84,
+    40,
+    272
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chain_new",
+   "show": "f('chain_fixed')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_lamp_b__chain_new.webp",
+   "rect": [
+    1346,
+    84,
+    32,
+    552
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

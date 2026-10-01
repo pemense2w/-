@@ -1,0 +1,665 @@
+{
+ "id": "c3_stern",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c3_starboard",
+  "right": "c3_port"
+ },
+ "bg": [
+  {
+   "variant": "clear",
+   "tex": "c3/c3_stern__clear.webp",
+   "when": "f('fog_lifted')"
+  },
+  {
+   "variant": "fog",
+   "tex": "c3/c3_stern__fog.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "row_s",
+   "rect": [
+    360,
+    340,
+    880,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "look_here",
+   "rect": [
+    300,
+    420,
+    760,
+    400
+   ],
+   "when": "here_any()",
+   "kind": null
+  },
+  {
+   "id": "look_down",
+   "rect": [
+    520,
+    840,
+    560,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "to_deck",
+   "rect": [
+    20,
+    640,
+    300,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "to_chart",
+   "rect": [
+    1280,
+    640,
+    300,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "boat_bell",
+   "rect": [
+    720,
+    540,
+    160,
+    120
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 760,
+   "r": 520,
+   "color": "#ffb860",
+   "when": "f('bow_lamp')",
+   "intensity": 0.5,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "float_red_near",
+   "show": "near('red', 's') and not here('red')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_red.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.4275,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "float_red_here",
+   "show": "here('red')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_red.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "float_green_near",
+   "show": "near('green', 's') and not here('green')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_green.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.4275,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "float_green_here",
+   "show": "here('green')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_green.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "float_pale_near",
+   "show": "near('pale', 's') and not here('pale')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_pale.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.4275,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "float_pale_here",
+   "show": "here('pale')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_pale.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "float_yellow_near",
+   "show": "near('yellow', 's') and not here('yellow')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_yellow.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.4275,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "float_yellow_here",
+   "show": "here('yellow')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__float_yellow.webp",
+   "rect": [
+    0,
+    0,
+    240,
+    380
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "tree_near",
+   "show": "near('tree', 's') and not here('tree')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__tree.webp",
+   "rect": [
+    0,
+    0,
+    421,
+    413
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.45,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "tree_here",
+   "show": "here('tree')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__tree.webp",
+   "rect": [
+    0,
+    0,
+    421,
+    413
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "buoy_near",
+   "show": "near('buoy', 's') and not here('buoy')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__buoy.webp",
+   "rect": [
+    0,
+    0,
+    224,
+    375
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.45,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "buoy_here",
+   "show": "here('buoy')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__buoy.webp",
+   "rect": [
+    0,
+    0,
+    224,
+    375
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "reeds_near",
+   "show": "near('reeds', 's') and not here('reeds')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__reeds.webp",
+   "rect": [
+    0,
+    0,
+    447,
+    389
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.45,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "reeds_here",
+   "show": "here('reeds')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__reeds.webp",
+   "rect": [
+    0,
+    0,
+    447,
+    389
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "deep_near",
+   "show": "near('deep', 's') and not here('deep')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__deep.webp",
+   "rect": [
+    0,
+    0,
+    444,
+    324
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.54,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "deep_here",
+   "show": "here('deep')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__deep.webp",
+   "rect": [
+    0,
+    0,
+    444,
+    324
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    560,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "landing_near",
+   "show": "near('landing', 's') and not here('landing')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__landing.webp",
+   "rect": [
+    0,
+    0,
+    404,
+    518
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    560
+   ],
+   "anchor": "bc",
+   "scale": 0.36000000000000004,
+   "alpha": 0.38,
+   "tint": "#c9d8da"
+  },
+  {
+   "id": "landing_here",
+   "show": "here('landing')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__landing.webp",
+   "rect": [
+    0,
+    0,
+    404,
+    518
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    560,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 0.9,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "bottle_tree_here",
+   "show": "here('tree') and not f('got_tomas_note')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_tree.webp",
+   "rect": [
+    0,
+    0,
+    108,
+    152
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "bottle_reeds_here",
+   "show": "here('reeds') and not f('got_frag5')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_reeds.webp",
+   "rect": [
+    0,
+    0,
+    171,
+    134
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "mast_here",
+   "show": "here('deep')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__mast.webp",
+   "rect": [
+    0,
+    0,
+    204,
+    398
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    560,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "heron_mast_here",
+   "show": "here('deep') and not f('got_frag6')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c3/c3_lm__heron_mast.webp",
+   "rect": [
+    0,
+    0,
+    174,
+    347
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    560,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "heron_frag_here",
+   "show": "here('deep') and f('heron_gave') and not f('got_frag6')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c3/c3_lm__heron_frag.webp",
+   "rect": [
+    0,
+    0,
+    225,
+    457
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    560,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 1.0,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "post_here",
+   "show": "here('landing')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__post.webp",
+   "rect": [
+    0,
+    0,
+    108,
+    186
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    620,
+    760
+   ],
+   "anchor": "bc",
+   "scale": 0.9,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#334756"
+}

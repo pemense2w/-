@@ -1,0 +1,106 @@
+{
+ "id": "c2_bottle",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c2_bh_left",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_bottle.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "bottle_cork",
+   "rect": [
+    1170,
+    500,
+    120,
+    110
+   ],
+   "when": "not f('bottle_open')",
+   "kind": null
+  },
+  {
+   "id": "ship",
+   "rect": [
+    520,
+    440,
+    420,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bottle_glass",
+   "rect": [
+    460,
+    400,
+    780,
+    340
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "moth_bottle",
+   "show": "not f('bottle_open')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c2/c2_bottle__moth_bottle.webp",
+   "rect": [
+    600,
+    506,
+    136,
+    96
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cork",
+   "show": "not f('bottle_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bottle__cork.webp",
+   "rect": [
+    1186,
+    526,
+    114,
+    98
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cork_out",
+   "show": "f('bottle_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c2/c2_bottle__cork_out.webp",
+   "rect": [
+    1271,
+    687,
+    124,
+    116
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.08",
+ "ambient": "#2c3b46"
+}

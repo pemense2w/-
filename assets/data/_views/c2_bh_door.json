@@ -1,0 +1,85 @@
+{
+ "id": "c2_bh_door",
+ "chapter": "c2",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c2_bh_right",
+  "right": "c2_bh_left"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c2/c2_bh_door.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "door_out",
+   "rect": [
+    546,
+    176,
+    508,
+    734
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "life_ring",
+   "rect": [
+    160,
+    300,
+    200,
+    200
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "rack",
+   "rect": [
+    1150,
+    250,
+    200,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "barrel_d",
+   "rect": [
+    1200,
+    630,
+    170,
+    270
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 420,
+   "r": 780,
+   "color": "#a8c4c0",
+   "when": null,
+   "intensity": 0.45,
+   "flicker": 0.0,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.5",
+ "ambient": "#2c3b46"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "c3_reeds",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_reeds.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "reeds",
+   "rect": [
+    300,
+    120,
+    1000,
+    800
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "reed_bottle",
+   "rect": [
+    800,
+    560,
+    320,
+    300
+   ],
+   "when": "not f('got_frag5')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "reeds_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__reeds.webp",
+   "rect": [
+    0,
+    0,
+    447,
+    389
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    870
+   ],
+   "anchor": "bc",
+   "scale": 1.9,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "bottle_reeds_big",
+   "show": "not f('got_frag5')",
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__bottle_reeds.webp",
+   "rect": [
+    0,
+    0,
+    171,
+    134
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    870
+   ],
+   "anchor": "bc",
+   "scale": 1.9,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#334756"
+}

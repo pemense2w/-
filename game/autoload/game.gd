@@ -214,7 +214,27 @@ func ev(expr: String):
 func evb(expr) -> bool:
 	if expr == null:
 		return true
-	return bool(ev(str(expr)))
+	var r = ev(str(expr))
+	if r is String:
+		return r != ""
+	if r == null:
+		return false
+	if r is bool or r is int or r is float:
+		return bool(r)
+	return true
+
+func near(what: String, dir: String) -> bool:
+	return chapter != null and chapter.near(what, dir)
+
+func here(what: String) -> bool:
+	return chapter != null and chapter.here(what)
+
+func here_any() -> bool:
+	return chapter != null and chapter.here_any()
+
+## expression helper (the Expression class has no reliable ternary): pick(cond, a, b)
+func pick(cond, a, b):
+	return a if cond else b
 
 func evf(expr, fallback: float = 0.0) -> float:
 	if expr == null:
@@ -227,6 +247,13 @@ func f(name: String):
 	if s.is_empty():
 		return false
 	return s.flags.get(name, false)
+
+func fs(name: String) -> String:
+	## string-valued flag (expressions compare these safely: fs('hung') == 'left')
+	if s.is_empty():
+		return ""
+	var v = s.flags.get(name, "")
+	return v if v is String else ""
 
 func fi(name: String) -> int:
 	if s.is_empty():

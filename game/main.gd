@@ -23,6 +23,7 @@ var arrow_b: Widget.Arrow
 var btn_nb: Button
 var btn_pell: Button
 var btn_menu: Button
+var time_btn: Control
 var held_icon: TextureRect
 var overlay: Control
 var modal: Control = null
@@ -49,6 +50,7 @@ func _ready() -> void:
 	G.memory_requested.connect(_on_memory)
 	G.ending_requested.connect(_on_ending)
 	G.chapter_card.connect(_on_chapter_card)
+	G.fx.connect(_on_fx)
 	G.request_title.connect(show_title)
 	G.settings_changed.connect(_apply_settings)
 	L.language_changed.connect(_relabel)
@@ -129,6 +131,12 @@ func _build_ui() -> void:
 	btn_nb = _bar_button(Vector2(1180, SH + 110), 122, func(): open_notebook())
 	btn_pell = _bar_button(Vector2(1312, SH + 110), 122, func(): ask_pell())
 	btn_menu = _bar_button(Vector2(1444, SH + 110), 116, func(): open_pause())
+	time_btn = TimeButton.new()
+	time_btn.position = Vector2(24, 24)
+	time_btn.size = Vector2(96, 96)
+	time_btn.visible = false
+	time_btn.pressed.connect(func(): if not G.busy: G.chapter.toggle_era())
+	add_child(time_btn)
 	held_icon = TextureRect.new()
 	held_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	held_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -223,6 +231,8 @@ func _on_changed() -> void:
 		arrow_r.visible = nav.get("right", null) != null
 		arrow_b.visible = nav.get("back", null) != null
 	_update_satchel()
+	time_btn.visible = G.in_game and not G.s.is_empty() and G.f("watch_ok") and int(G.s.chapter) == 4
+	time_btn.queue_redraw()
 	btn_nb.visible = not G.settings.purist
 	btn_nb.text = L.t("ui.notebook") + ("  •" if _nb_pulse > 0.0 else "")
 
@@ -397,6 +407,9 @@ func _unhandled_key_input(e: InputEvent) -> void:
 		KEY_E:
 			if G.held != "":
 				open_inspect(G.held)
+		KEY_T:
+			if time_btn.visible:
+				G.chapter.toggle_era()
 		KEY_F:
 			if view:
 				view.ping_hotspots()
@@ -502,6 +515,17 @@ func _begin(fn: Callable) -> void:
 	modal = null
 	fn.call()
 
+func _on_fx(name: String, _data: Dictionary) -> void:
+	if name == "era_flip" and not G.test_mode:
+		var fl := ColorRect.new()
+		fl.color = Color(1, 0.96, 0.85, 0.9) if G.era() == "then" else Color(0.75, 0.85, 0.95, 0.9)
+		fl.size = Vector2(W, SH)
+		fl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		scene_area.add_child(fl)
+		var tw := create_tween()
+		tw.tween_property(fl, "color:a", 0.0, 0.55)
+		tw.tween_callback(fl.queue_free)
+
 func _on_chapter_card(n: int) -> void:
 	if G.test_mode:
 		return
@@ -563,6 +587,37 @@ func widget(id: String) -> Widget:
 			return w.n
 	return null
 
+
+class TimeButton extends Control:
+	signal pressed
+	var hover := false
+	func _ready() -> void:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+		focus_mode = Control.FOCUS_ALL
+		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		mouse_entered.connect(func(): hover = true; queue_redraw())
+		mouse_exited.connect(func(): hover = false; queue_redraw())
+		tooltip_text = "Then / Now  (T)"
+	func _gui_input(e: InputEvent) -> void:
+		if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+			pressed.emit()
+			accept_event()
+		elif e is InputEventKey and e.pressed and not e.echo and (e.keycode == KEY_ENTER or e.keycode == KEY_SPACE):
+			pressed.emit()
+			accept_event()
+	func _draw() -> void:
+		var c := size / 2.0
+		var then := G.era() == "then"
+		draw_circle(c, 46, Color("#c9a24d") if not hover else Color("#f0cf7a"))
+		draw_circle(c, 38, Color("#f3e3b8") if then else Color("#b9c8cc"))
+		for i in 12:
+			var a := TAU * i / 12.0
+			draw_line(c + Vector2(sin(a), -cos(a)) * 31, c + Vector2(sin(a), -cos(a)) * 36, Color("#3a2a18"), 2.0)
+		draw_line(c, c + Vector2(sin(deg_to_rad(130)), -cos(deg_to_rad(130))) * 20, Color("#2a1a0c"), 4.0)
+		draw_line(c, c + Vector2(sin(deg_to_rad(120)), -cos(deg_to_rad(120))) * 30, Color("#2a1a0c"), 3.0)
+		draw_circle(c + Vector2(0, -52), 7, Color("#c9a24d"))
+		if has_focus():
+			draw_arc(c, 50, 0, TAU, 32, Color.WHITE, 3.0)
 
 class HintPanel extends Control:
 	var again: Button

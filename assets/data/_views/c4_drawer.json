@@ -1,0 +1,83 @@
+{
+ "id": "c4_drawer",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c4_quarters_b",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_drawer__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_drawer__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "drawer_now",
+   "rect": [
+    200,
+    240,
+    1200,
+    520
+   ],
+   "when": "era() == 'now'",
+   "kind": null
+  },
+  {
+   "id": "chain",
+   "rect": [
+    540,
+    440,
+    520,
+    120
+   ],
+   "when": "era() == 'then' and not f('got_chain')",
+   "kind": null
+  },
+  {
+   "id": "drawer_then",
+   "rect": [
+    200,
+    240,
+    1200,
+    520
+   ],
+   "when": "era() == 'then' and f('got_chain')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "chain",
+   "show": "era() == 'then' and not f('got_chain')",
+   "fx": null,
+   "z": 0,
+   "tex": "c4/c4_drawer__chain.webp",
+   "rect": [
+    536,
+    452,
+    524,
+    136
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}

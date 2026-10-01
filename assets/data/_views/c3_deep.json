@@ -1,0 +1,144 @@
+{
+ "id": "c3_deep",
+ "chapter": "c3",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c3_bow",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c3/c3_deep.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "heron_mast",
+   "rect": [
+    580,
+    160,
+    440,
+    520
+   ],
+   "when": "not f('got_frag6')",
+   "kind": null
+  },
+  {
+   "id": "frag6",
+   "rect": [
+    880,
+    150,
+    240,
+    160
+   ],
+   "when": "f('heron_gave') and not f('got_frag6')",
+   "kind": null
+  },
+  {
+   "id": "deep_water",
+   "rect": [
+    200,
+    640,
+    1200,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "look_down",
+   "rect": [
+    300,
+    800,
+    1000,
+    190
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "mast_c",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c3/c3_lm__mast.webp",
+   "rect": [
+    0,
+    0,
+    204,
+    398
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    790
+   ],
+   "anchor": "bc",
+   "scale": 1.6,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "heron_c",
+   "show": "not f('got_frag6') and not f('heron_gave')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c3/c3_lm__heron_mast.webp",
+   "rect": [
+    0,
+    0,
+    174,
+    347
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    790
+   ],
+   "anchor": "bc",
+   "scale": 1.6,
+   "alpha": 1.0,
+   "tint": null
+  },
+  {
+   "id": "heron_cf",
+   "show": "f('heron_gave') and not f('got_frag6')",
+   "fx": "sway",
+   "z": 0,
+   "tex": "c3/c3_lm__heron_frag.webp",
+   "rect": [
+    0,
+    0,
+    225,
+    457
+   ],
+   "pivot": null,
+   "ref": true,
+   "pos": [
+    800,
+    790
+   ],
+   "anchor": "bc",
+   "scale": 1.6,
+   "alpha": 1.0,
+   "tint": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.2",
+ "ambient": "#334756"
+}

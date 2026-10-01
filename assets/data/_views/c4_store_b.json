@@ -1,0 +1,68 @@
+{
+ "id": "c4_store_b",
+ "chapter": "c4",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c4_store_a",
+  "right": "c4_store_a"
+ },
+ "bg": [
+  {
+   "variant": "then",
+   "tex": "c4/c4_store_b__then.webp",
+   "when": "era() == 'then'"
+  },
+  {
+   "variant": "now",
+   "tex": "c4/c4_store_b__now.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "stairs_up",
+   "rect": [
+    700,
+    420,
+    800,
+    440
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "stairs_look",
+   "rect": [
+    300,
+    740,
+    380,
+    200
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "window_s2",
+   "rect": [
+    220,
+    100,
+    210,
+    340
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "pick(era() == 'then', 0.28, 0.22)",
+ "ambient": "#3a4a58"
+}
