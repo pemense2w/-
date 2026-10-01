@@ -1,0 +1,205 @@
+{
+ "id": "c1_e",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c1_n",
+  "right": "c1_s"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_e.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "grate",
+   "rect": [
+    560,
+    600,
+    480,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "armchair",
+   "rect": [
+    1264,
+    560,
+    320,
+    400
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coal",
+   "rect": [
+    200,
+    800,
+    140,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "vase",
+   "rect": [
+    810,
+    330,
+    90,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "painting",
+   "rect": [
+    700,
+    120,
+    480,
+    320
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "clock",
+   "rect": [
+    420,
+    270,
+    200,
+    206
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "candle",
+   "rect": [
+    1040,
+    340,
+    100,
+    140
+   ],
+   "when": "not f('candle_taken')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 1430,
+   "y": 790,
+   "r": 220,
+   "color": "#ff9a50",
+   "when": null,
+   "intensity": 0.28,
+   "flicker": 0.0,
+   "hole": 1.0
+  },
+  {
+   "x": 1090,
+   "y": 410,
+   "r": 420,
+   "color": "#ffb050",
+   "when": "f('candle_burning') and not f('candle_taken')",
+   "intensity": 1.0,
+   "flicker": 0.1,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "warm",
+   "show": null,
+   "fx": "pulse",
+   "z": 0,
+   "tex": "c1/c1_e__warm.webp",
+   "rect": [
+    1338,
+    778,
+    184,
+    64
+   ],
+   "pivot": null
+  },
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "hand_h",
+   "z": 0,
+   "tex": "c1/c1_e__hand_h.webp",
+   "rect": [
+    514,
+    326,
+    12,
+    49
+   ],
+   "pivot": [
+    520,
+    366
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "hand_m",
+   "z": 0,
+   "tex": "c1/c1_e__hand_m.webp",
+   "rect": [
+    515,
+    310,
+    10,
+    68
+   ],
+   "pivot": [
+    520,
+    366
+   ]
+  },
+  {
+   "id": "stub",
+   "show": "not f('candle_taken')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_e__stub.webp",
+   "rect": [
+    1060,
+    404,
+    96,
+    118
+   ],
+   "pivot": null
+  },
+  {
+   "id": "flame",
+   "show": "f('candle_burning') and not f('candle_taken')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c1/c1_e__flame.webp",
+   "rect": [
+    1074,
+    352,
+    32,
+    60
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

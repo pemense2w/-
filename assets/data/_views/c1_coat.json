@@ -1,0 +1,103 @@
+{
+ "id": "c1_coat",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_s",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_coat.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "pocket_l",
+   "rect": [
+    260,
+    560,
+    400,
+    300
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "pocket_r",
+   "rect": [
+    880,
+    560,
+    400,
+    300
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "key",
+   "rect": [
+    980,
+    600,
+    220,
+    200
+   ],
+   "when": "f('pocket_r') and not f('got_key')",
+   "kind": null
+  },
+  {
+   "id": "ticket",
+   "rect": [
+    360,
+    580,
+    280,
+    150
+   ],
+   "when": "f('pocket_l') and not f('got_ticket')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "key",
+   "show": "f('pocket_r') and not f('got_key')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_coat__key.webp",
+   "rect": [
+    977,
+    651,
+    266,
+    155
+   ],
+   "pivot": null
+  },
+  {
+   "id": "ticket",
+   "show": "f('pocket_l') and not f('got_ticket')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_coat__ticket.webp",
+   "rect": [
+    371,
+    577,
+    294,
+    196
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

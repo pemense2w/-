@@ -1,0 +1,5 @@
+[
+ {"id": "clock_fish", "ch": 1, "sketch": "clock_fish", "title": "nb.clock_fish.title", "text": "nb.clock_fish.text", "alt": {"when": "f('clock_set')", "key": "nb.clock_fish.text2"}},
+ {"id": "floats", "ch": 1, "sketch": "floats", "title": "nb.floats.title", "text": "nb.floats.text"},
+ {"id": "shapes", "ch": 1, "sketch": "shapes", "title": "nb.shapes.title", "text": "nb.shapes.text"}
+]

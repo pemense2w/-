@@ -1,0 +1,250 @@
+{
+ "id": "c1_n",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c1_w",
+  "right": "c1_e"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_n.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "window",
+   "rect": [
+    590,
+    130,
+    420,
+    410
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "barometer",
+   "rect": [
+    1196,
+    216,
+    168,
+    168
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "sill",
+   "rect": [
+    505,
+    541.0,
+    590,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "desk",
+   "rect": [
+    320,
+    635.0,
+    960,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "drawer",
+   "rect": [
+    630,
+    735,
+    340,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "lantern_desk",
+   "rect": [
+    410,
+    530,
+    130,
+    130
+   ],
+   "when": "not f('got_lantern')",
+   "kind": null
+  },
+  {
+   "id": "chart",
+   "rect": [
+    175,
+    190,
+    220,
+    250
+   ],
+   "when": "not f('got_chart')",
+   "kind": null
+  },
+  {
+   "id": "lantern_win",
+   "rect": [
+    740,
+    440,
+    120,
+    130
+   ],
+   "when": "f('lantern_placed')",
+   "kind": null
+  },
+  {
+   "id": "jar",
+   "rect": [
+    1010,
+    530,
+    110,
+    130
+   ],
+   "when": "not f('moth_free')",
+   "kind": null
+  },
+  {
+   "id": "moth_n",
+   "rect": [
+    810,
+    410,
+    130,
+    120
+   ],
+   "when": "f('moth_window')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 480,
+   "r": 760,
+   "color": "#ffb860",
+   "when": "f('lantern_placed')",
+   "intensity": 1.0,
+   "flicker": 0.06,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "far_light",
+   "show": "f('lantern_placed')",
+   "fx": "pulse",
+   "z": 0,
+   "tex": "c1/c1_n__far_light.webp",
+   "rect": [
+    791,
+    264,
+    18,
+    28
+   ],
+   "pivot": null
+  },
+  {
+   "id": "lantern_desk",
+   "show": "not f('got_lantern')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_n__lantern_desk.webp",
+   "rect": [
+    415,
+    487,
+    146,
+    209
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chart",
+   "show": "not f('got_chart')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_n__chart.webp",
+   "rect": [
+    166,
+    182,
+    274,
+    306
+   ],
+   "pivot": null
+  },
+  {
+   "id": "jar",
+   "show": "not f('moth_free')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c1/c1_n__jar.webp",
+   "rect": [
+    1014,
+    534,
+    130,
+    161
+   ],
+   "pivot": null
+  },
+  {
+   "id": "jar_open",
+   "show": "f('moth_free')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_n__jar_open.webp",
+   "rect": [
+    1014,
+    516,
+    154,
+    179
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moth_n",
+   "show": "f('moth_window')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c1/c1_n__moth_n.webp",
+   "rect": [
+    807,
+    426,
+    166,
+    112
+   ],
+   "pivot": null
+  },
+  {
+   "id": "lantern_win",
+   "show": "f('lantern_placed')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c1/c1_n__lantern_win.webp",
+   "rect": [
+    748,
+    417,
+    140,
+    201
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#3a4d5c"
+}

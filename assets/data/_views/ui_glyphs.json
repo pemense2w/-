@@ -1,0 +1,108 @@
+{
+ "id": "ui_glyphs",
+ "chapter": "ui",
+ "kind": "sheet",
+ "size": [
+  1200,
+  400
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "glyph_eye",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_eye.webp",
+   "rect": [
+    15,
+    143,
+    206,
+    154
+   ],
+   "pivot": null
+  },
+  {
+   "id": "glyph_moon",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_moon.webp",
+   "rect": [
+    226,
+    126,
+    168,
+    188
+   ],
+   "pivot": null
+  },
+  {
+   "id": "glyph_fish",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_fish.webp",
+   "rect": [
+    427,
+    158,
+    193,
+    124
+   ],
+   "pivot": null
+  },
+  {
+   "id": "glyph_bell",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_bell.webp",
+   "rect": [
+    631,
+    128,
+    174,
+    182
+   ],
+   "pivot": null
+  },
+  {
+   "id": "glyph_moth",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_moth.webp",
+   "rect": [
+    824,
+    148,
+    188,
+    140
+   ],
+   "pivot": null
+  },
+  {
+   "id": "glyph_wave",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_glyphs__glyph_wave.webp",
+   "rect": [
+    1021,
+    144,
+    179,
+    152
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": null,
+ "ambient": null
+}

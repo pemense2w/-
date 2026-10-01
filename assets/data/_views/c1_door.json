@@ -1,0 +1,97 @@
+{
+ "id": "c1_door",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_s",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_door.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lockbox",
+   "rect": [
+    260,
+    250,
+    1080,
+    500
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "dials",
+   "kind": "dials",
+   "rect": [
+    360,
+    300,
+    900,
+    400
+   ],
+   "when": null,
+   "args": {
+    "cells": [
+     [
+      380,
+      420,
+      160,
+      160
+     ],
+     [
+      607,
+      420,
+      160,
+      160
+     ],
+     [
+      834,
+      420,
+      160,
+      160
+     ],
+     [
+      1061,
+      420,
+      160,
+      160
+     ]
+    ],
+    "symbols": [
+     "eye",
+     "moon",
+     "fish",
+     "bell",
+     "moth",
+     "wave"
+    ],
+    "solution": [
+     "eye",
+     "moon",
+     "fish",
+     "bell"
+    ],
+    "flag": "door_open",
+    "asset": "ui/glyphs"
+   }
+  }
+ ],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

@@ -1,0 +1,217 @@
+{
+ "id": "c1_s",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c1_e",
+  "right": "c1_w"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_s.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "door",
+   "rect": [
+    584,
+    94,
+    432,
+    856
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "lockplate",
+   "rect": [
+    880,
+    420,
+    120,
+    130
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coat",
+   "rect": [
+    230,
+    150,
+    230,
+    550
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "mirror",
+   "rect": [
+    1280,
+    190,
+    220,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "mat",
+   "rect": [
+    580,
+    922.0,
+    440,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "oar",
+   "rect": [
+    1136,
+    250,
+    100,
+    640
+   ],
+   "when": "not f('got_oar')",
+   "kind": null
+  },
+  {
+   "id": "oar_stand",
+   "rect": [
+    1110,
+    840,
+    120,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "frag2",
+   "rect": [
+    740,
+    931.0,
+    120,
+    88
+   ],
+   "when": "f('mat_lifted') and not f('got_frag2')",
+   "kind": null
+  },
+  {
+   "id": "door_exit",
+   "rect": [
+    700,
+    300,
+    220,
+    600
+   ],
+   "when": "f('door_open')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 700,
+   "r": 520,
+   "color": "#9ac4c8",
+   "when": "f('door_open')",
+   "intensity": 0.5,
+   "flicker": 0.0,
+   "hole": 1.0
+  }
+ ],
+ "texts": [
+  {
+   "id": "mat",
+   "key": "world.return",
+   "rect": [
+    600,
+    944,
+    400,
+    44
+   ],
+   "size": 28,
+   "color": "#d9c9a0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 6,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "door_open",
+   "show": "f('door_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_s__door_open.webp",
+   "rect": [
+    582,
+    92,
+    436,
+    860
+   ],
+   "pivot": null
+  },
+  {
+   "id": "mat_lift",
+   "show": "f('mat_lifted')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_s__mat_lift.webp",
+   "rect": [
+    568,
+    876,
+    502,
+    114
+   ],
+   "pivot": null
+  },
+  {
+   "id": "frag2",
+   "show": "f('mat_lifted') and not f('got_frag2')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_s__frag2.webp",
+   "rect": [
+    736,
+    950,
+    150,
+    50
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oar",
+   "show": "not f('got_oar')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_s__oar.webp",
+   "rect": [
+    1132,
+    246,
+    112,
+    688
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

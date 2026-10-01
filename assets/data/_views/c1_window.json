@@ -1,0 +1,108 @@
+{
+ "id": "c1_window",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_n",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "shapes",
+   "tex": "c1/c1_window__shapes.webp",
+   "when": "f('moth_window')"
+  },
+  {
+   "variant": "plain",
+   "tex": "c1/c1_window__plain.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "lake",
+   "rect": [
+    450,
+    500,
+    910,
+    390
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "moth_w",
+   "rect": [
+    370,
+    540,
+    160,
+    160
+   ],
+   "when": "f('moth_window')",
+   "kind": null
+  },
+  {
+   "id": "lantern_w",
+   "rect": [
+    230,
+    640,
+    200,
+    280
+   ],
+   "when": "f('lantern_placed')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 330,
+   "y": 700,
+   "r": 900,
+   "color": "#ffb860",
+   "when": "f('lantern_placed')",
+   "intensity": 1.0,
+   "flicker": 0.06,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "lantern_w",
+   "show": "f('lantern_placed')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c1/c1_window__lantern_w.webp",
+   "rect": [
+    220,
+    569,
+    256,
+    385
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moth_w",
+   "show": "f('moth_window')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c1/c1_window__moth_w.webp",
+   "rect": [
+    354,
+    557,
+    228,
+    143
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#3a4d5c"
+}

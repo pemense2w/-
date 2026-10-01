@@ -1,0 +1,38 @@
+{
+ "id": "ui_icons",
+ "chapter": "ui",
+ "kind": "sheet",
+ "size": [
+  1000,
+  500
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "pell_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "ui/ui_icons__pell_big.webp",
+   "rect": [
+    86,
+    145,
+    309,
+    244
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": null,
+ "ambient": null
+}

@@ -1,0 +1,41 @@
+{
+ "id": "item_ticket",
+ "chapter": "items",
+ "kind": "item",
+ "size": [
+  384,
+  384
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "icon",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "items/item_ticket__icon.webp",
+   "rect": [
+    0,
+    0,
+    384,
+    384
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {
+  "item": "ticket",
+  "light": null
+ },
+ "dark": null,
+ "ambient": null
+}

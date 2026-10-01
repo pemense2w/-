@@ -1,0 +1,46 @@
+{
+ "id": "c1_painting",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": "lit",
+   "tex": "c1/c1_painting__lit.webp",
+   "when": "f('painting_lit')"
+  },
+  {
+   "variant": "dark",
+   "tex": "c1/c1_painting__dark.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "painting_surface",
+   "rect": [
+    178,
+    118,
+    1244,
+    764
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "c1_bowl",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_bowl.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "bowl",
+   "rect": [
+    420,
+    150,
+    760,
+    640
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "pell",
+   "rect": [
+    680,
+    380,
+    330,
+    200
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "pell",
+   "show": null,
+   "fx": "bob",
+   "z": 0,
+   "tex": "c1/c1_bowl__pell.webp",
+   "rect": [
+    603,
+    356,
+    304,
+    221
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

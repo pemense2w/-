@@ -1,0 +1,41 @@
+{
+ "id": "c1_photo",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_photo.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "photo_face",
+   "rect": [
+    436,
+    116,
+    728,
+    768
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

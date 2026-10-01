@@ -1,0 +1,8 @@
+.godot/
+*.import~
+art/.tmp/
+art/.cache.json
+__pycache__/
+*.pyc
+/export/
+/tests/out/

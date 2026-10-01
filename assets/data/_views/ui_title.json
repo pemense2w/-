@@ -1,0 +1,40 @@
+{
+ "id": "ui_title",
+ "chapter": "ui",
+ "kind": "title",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "ui/ui_title.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [],
+ "lights": [
+  {
+   "x": 401,
+   "y": 760,
+   "r": 520,
+   "color": "#ffb860",
+   "when": null,
+   "intensity": 0.9,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.0",
+ "ambient": null
+}

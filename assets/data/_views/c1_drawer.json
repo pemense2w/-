@@ -1,0 +1,92 @@
+{
+ "id": "c1_drawer",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_n",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_drawer.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "drawer_inner",
+   "rect": [
+    180,
+    120,
+    1240,
+    760
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "food",
+   "rect": [
+    850,
+    410,
+    210,
+    250
+   ],
+   "when": "not f('got_food')",
+   "kind": null
+  },
+  {
+   "id": "note",
+   "rect": [
+    370,
+    250,
+    300,
+    360
+   ],
+   "when": "not f('got_note')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "food",
+   "show": "not f('got_food')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_drawer__food.webp",
+   "rect": [
+    846,
+    406,
+    254,
+    298
+   ],
+   "pivot": null
+  },
+  {
+   "id": "note",
+   "show": "not f('got_note')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_drawer__note.webp",
+   "rect": [
+    359,
+    252,
+    358,
+    406
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

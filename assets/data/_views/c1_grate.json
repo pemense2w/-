@@ -1,0 +1,87 @@
+{
+ "id": "c1_grate",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_grate.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "scrap",
+   "rect": [
+    540,
+    620,
+    540,
+    190
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "ash_pile",
+   "rect": [
+    1100,
+    780,
+    240,
+    110
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "sorry",
+   "key": "world.sorry",
+   "rect": [
+    560,
+    680,
+    480,
+    90
+   ],
+   "size": 64,
+   "color": "#3a2418",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 6,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "ash_pile",
+   "show": "not f('got_ash')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_grate__ash_pile.webp",
+   "rect": [
+    1116,
+    786,
+    244,
+    138
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

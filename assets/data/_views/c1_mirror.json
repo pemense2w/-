@@ -1,0 +1,84 @@
+{
+ "id": "c1_mirror",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_s",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_mirror.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "mirror_glass",
+   "rect": [
+    436,
+    96,
+    728,
+    808
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "frag1",
+   "rect": [
+    880,
+    670,
+    170,
+    130
+   ],
+   "when": "f('mirror_gave') and not f('got_frag1')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "refl",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_mirror__refl.webp",
+   "rect": [
+    736,
+    386,
+    164,
+    558
+   ],
+   "pivot": [
+    800,
+    900
+   ]
+  },
+  {
+   "id": "frag1",
+   "show": "f('mirror_gave') and not f('got_frag1')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_mirror__frag1.webp",
+   "rect": [
+    896,
+    686,
+    174,
+    130
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

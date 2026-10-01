@@ -1,0 +1,174 @@
+{
+ "id": "c1_books",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_books.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "books_row",
+   "rect": [
+    400,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "cabinet",
+   "rect": [
+    160,
+    620,
+    1280,
+    290
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "oil",
+   "rect": [
+    680,
+    620,
+    240,
+    280
+   ],
+   "when": "f('cabinet_open') and not f('got_oil')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "books",
+   "kind": "books",
+   "rect": [
+    400,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "args": {
+    "sprites": [
+     "book_red",
+     "book_green",
+     "book_pale",
+     "book_yellow"
+    ],
+    "slots": [
+     420,
+     600,
+     780,
+     960
+    ]
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "book_red",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__book_red.webp",
+   "rect": [
+    416,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_green",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__book_green.webp",
+   "rect": [
+    596,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_pale",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__book_pale.webp",
+   "rect": [
+    776,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_yellow",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__book_yellow.webp",
+   "rect": [
+    956,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cabinet_open",
+   "show": "f('cabinet_open')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__cabinet_open.webp",
+   "rect": [
+    86,
+    616,
+    1464,
+    338
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oil",
+   "show": "f('cabinet_open') and not f('got_oil')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_books__oil.webp",
+   "rect": [
+    686,
+    622,
+    264,
+    312
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}

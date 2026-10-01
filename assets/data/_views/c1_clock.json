@@ -1,0 +1,151 @@
+{
+ "id": "c1_clock",
+ "chapter": "c1",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c1_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c1/c1_clock.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "fish_engraving",
+   "rect": [
+    880,
+    400,
+    110,
+    110
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "match",
+   "rect": [
+    690,
+    690,
+    220,
+    120
+   ],
+   "when": "f('clock_set') and not f('got_match')",
+   "kind": null
+  },
+  {
+   "id": "hatch",
+   "rect": [
+    690,
+    690,
+    220,
+    120
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "clock",
+   "kind": "clock",
+   "rect": [
+    530,
+    110,
+    540,
+    540
+   ],
+   "when": null,
+   "args": {
+    "cx": 800,
+    "cy": 380,
+    "knob_h": [
+     620,
+     880
+    ],
+    "knob_m": [
+     980,
+     880
+    ],
+    "step_m": 5
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "hatch_open",
+   "show": "f('clock_set')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_clock__hatch_open.webp",
+   "rect": [
+    626,
+    686,
+    324,
+    168
+   ],
+   "pivot": null
+  },
+  {
+   "id": "match",
+   "show": "f('clock_set') and not f('got_match')",
+   "fx": null,
+   "z": 0,
+   "tex": "c1/c1_clock__match.webp",
+   "rect": [
+    730,
+    708,
+    191,
+    112
+   ],
+   "pivot": null
+  },
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "hand_h",
+   "z": 0,
+   "tex": "c1/c1_clock__hand_h.webp",
+   "rect": [
+    783,
+    216,
+    70,
+    237
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "hand_m",
+   "z": 0,
+   "tex": "c1/c1_clock__hand_m.webp",
+   "rect": [
+    788,
+    141,
+    60,
+    326
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.46 if not f('lantern_placed') else 0.2",
+ "ambient": "#0a1820"
+}
