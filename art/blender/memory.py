@@ -83,12 +83,22 @@ def mem_puppets():
     with S("tomas_lean"):
         v.layer(2); person(v, 800, B, 360, 78, hat=True, bun=False, lean=26, trousers=True)
     with S("ruth_sit"):
+        # seated at the desk, in profile (kept low in the sheet so her head is not cut off)
         v.layer(2)
-        v.add(rect(960, B - 130, 130, 24, 6), K)                         # seat
-        v.add(poly([(990, B - 130), (1000, B - 330), (1070, B - 330), (1086, B - 130)]), K)
-        v.add(ellipse(1034, B - 372, 28, 32), K); v.add(ellipse(1014, B - 396, 14, 14), K)
-        v.add(line([(1060, B - 290), (1150, B - 200)], 20), K)
-        v.add(rect(1086, B - 126, 36, 126, 6), K)
+        Bs = 560
+        v.add(rect(960, Bs - 130, 130, 24, 6), K)                                       # seat
+        v.add(rect(980, Bs - 330, 24, 210, 6), K)                                       # chair back
+        v.add(rect(964, Bs - 106, 18, 106), K); v.add(rect(1068, Bs - 106, 18, 106), K)  # chair legs
+        v.add(poly([(1002, Bs - 132), (1008, Bs - 210), (1006, Bs - 284), (1024, Bs - 298), (1058, Bs - 298), (1074, Bs - 282),
+                    (1070, Bs - 210), (1086, Bs - 132)]), K)                            # coat
+        v.add(rect(1034, Bs - 314, 18, 24, 4), K)                                       # neck
+        v.add(ellipse(1044, Bs - 344, 26, 31), K)                                       # head
+        v.add(poly([(1063, Bs - 354), (1081, Bs - 339), (1064, Bs - 335)]), K)          # nose
+        v.add(ellipse(1022, Bs - 360, 15, 15), K); v.add(ellipse(1026, Bs - 346, 12, 22), K)   # bun and hair
+        v.add(rect(1010, Bs - 152, 124, 30, 8), K)                                      # thigh
+        v.add(rect(1108, Bs - 150, 26, 150, 6), K)                                      # shin
+        v.add(ellipse(1128, Bs - 6, 24, 8), K)                                          # foot
+        v.add(line([(1062, Bs - 276), (1150, Bs - 196)], 20), K)                        # arm
     with S("chair"):
         v.layer(2)
         v.add(rect(1250, B - 130, 140, 24, 6), K); v.add(rect(1250, B - 330, 28, 210, 6), K); v.add(rect(1250, B - 106, 18, 106), K); v.add(rect(1372, B - 106, 18, 106), K)

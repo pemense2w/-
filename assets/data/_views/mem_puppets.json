@@ -24,10 +24,10 @@
    "z": 0,
    "tex": "mem/mem_puppets__ruth.webp",
    "rect": [
-    60,
-    64,
-    134,
-    304
+    55,
+    71,
+    161,
+    300
    ],
    "pivot": null
   },
@@ -38,10 +38,10 @@
    "z": 0,
    "tex": "mem/mem_puppets__ruth_lantern.webp",
    "rect": [
-    270,
-    64,
-    148,
-    304
+    265,
+    71,
+    174,
+    300
    ],
    "pivot": null
   },
@@ -54,7 +54,7 @@
    "rect": [
     489,
     39,
-    145,
+    174,
     329
    ],
    "pivot": null
@@ -66,9 +66,9 @@
    "z": 0,
    "tex": "mem/mem_puppets__tomas_lean.webp",
    "rect": [
-    729,
+    746,
     39,
-    171,
+    183,
     329
    ],
    "pivot": null
@@ -81,9 +81,9 @@
    "tex": "mem/mem_puppets__ruth_sit.webp",
    "rect": [
     952,
-    0,
+    177,
     216,
-    368
+    393
    ],
    "pivot": null
   },
