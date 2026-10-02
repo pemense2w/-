@@ -140,8 +140,9 @@ def hull_foreground(v, kind):
         if kind == "bow":
             with v.sprite("lamp_dir", show="f('bow_lamp')", fx="flicker"):
                 v.layer(6)
-                v.add(rect(740, 520, 120, 100, 14), "#f3cf84", glow=2.0)
-                flame(v, 800, 596, 0.9, d=6)
+                v.add(rect(740, 520, 120, 100, 14), "#c8963f", glow=0.6)
+                v.add(rect(752, 532, 96, 76, 8), "#e3b866", glow=0.8)
+                flame(v, 800, 604, 1.5, d=6, glow=2.2)
             v.layer(5)
             v.add(rect(730, 510, 140, 16, 4), "#1f2a2b"); v.add(rect(730, 616, 140, 14, 4), "#1f2a2b")
         else:
@@ -382,13 +383,30 @@ def c3_bell():
     v.layer(1)
     v.rect(740, 40, 120, 420, "#4a3326", r=8)
     v.layer(2)
-    v.add(union(ellipse(800, 640, 270, 230), rect(530, 600, 540, 150, 20)), BRASS, grad=BRASS_D)
-    v.add(poly([(530, 700), (1070, 700), (1120, 780), (480, 780)]), BRASS)
-    v.ink(ring(800, 600, 200, 188), BRASS_D, d=2)
+    # a real bell profile: round shoulders, a slight waist, a flared mouth
+    import math as _m
+    def _hw(t):
+        if t < 0.35:
+            return 46 + 130 * _m.sin(t / 0.35 * _m.pi / 2)
+        if t < 0.78:
+            return 176 + 34 * ((t - 0.35) / 0.43)
+        return 210 + 110 * ((t - 0.78) / 0.22) ** 2
+    prof = [(_hw(i / 40.0), 250 + 500 * i / 40.0) for i in range(41)]
+    body = poly([(800 - w, y) for w, y in prof] + [(800 + w, y) for w, y in reversed(prof)])
+    v.add(body, BRASS, grad=BRASS_D)
+    v.add(ellipse(800, 756, 336, 34), BRASS_D)                                   # the lip
+    v.add(rect(466, 742, 668, 22, 8), BRASS)
+    _ts = [0.14 + 0.5 * i / 12.0 for i in range(13)]
+    v.add(poly([(800 - _hw(t) + 26, 250 + 500 * t) for t in _ts] + [(800 - _hw(t) + 58, 250 + 500 * t) for t in reversed(_ts)]), "#e0c987")   # a highlight
+    for ty in (0.42, 0.52):
+        yy = 250 + 500 * ty
+        v.ink(line([(800 - _hw(ty) + 6, yy), (800 + _hw(ty) - 6, yy)], 6), BRASS_D, d=2)
+    v.add(ellipse(800, 244, 44, 34), BRASS_D)                                    # the crown
+    v.ink(ring(800, 238, 28, 18), "#2a1c10", d=2)                                # the loop it hangs from
     v.layer(3)
-    v.add(ellipse(800, 790, 36, 36), BRASS_D)
-    v.add(line([(800, 790), (800, 940)], 14), "#b79c68")
-    v.add(ellipse(800, 950, 22, 22), "#b79c68")
+    v.add(ellipse(800, 780, 34, 34), BRASS_D)
+    v.add(line([(800, 780), (800, 930)], 14), "#b79c68")
+    v.add(ellipse(800, 944, 22, 22), "#b79c68")
     v.widget("rhythm", "rhythm", (300, 300, 1000, 650), mode="answer", cx=800, cy=640)
     v.hot("bell_body", (480, 380, 640, 420))
     return v

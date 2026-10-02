@@ -14,6 +14,8 @@ var vig: ColorRect
 var grain: ColorRect
 var fade: ColorRect
 var caption: Label
+var cap_bg: ColorRect
+const CAP_H := 88.0
 var sfx_label: Label
 var hover_label: Label
 var slots: Array = []
@@ -99,9 +101,14 @@ func _build_ui() -> void:
 	edge.size = Vector2(W, 3)
 	edge.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(edge)
+	cap_bg = ColorRect.new()
+	cap_bg.color = Color(0.04, 0.06, 0.07, 0.9)
+	cap_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	cap_bg.visible = false
+	add_child(cap_bg)
 	caption = UI.label("", 30, UI.TEXT, HORIZONTAL_ALIGNMENT_CENTER)
 	caption.position = Vector2(60, SH + 6)
-	caption.size = Vector2(W - 120, 88)
+	caption.size = Vector2(W - 120, CAP_H)
 	caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	caption.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	add_child(caption)
@@ -187,8 +194,12 @@ func _relabel() -> void:
 	btn_pell.text = L.t("ui.ask_pell")
 	btn_menu.text = L.t("ui.menu")
 	for b in [btn_nb, btn_pell, btn_menu]:
-		b.add_theme_font_override("font", Fonts.ui())
-		b.add_theme_font_size_override("font_size", mini(UI.fs(22), 26))
+		var f := Fonts.ui()
+		b.add_theme_font_override("font", f)
+		var fsz := mini(UI.fs(22), 26)
+		while fsz > 14 and f.get_string_size(b.text + " ·", HORIZONTAL_ALIGNMENT_LEFT, -1, fsz).x > b.size.x - 14:
+			fsz -= 1
+		b.add_theme_font_size_override("font_size", fsz)
 	caption.add_theme_font_override("font", Fonts.ui())
 	caption.add_theme_font_size_override("font_size", UI.fs(30))
 	_on_changed()
@@ -197,6 +208,7 @@ func _apply_settings() -> void:
 	_apply_theme_font()
 	caption.add_theme_font_size_override("font_size", UI.fs(30))
 	caption.add_theme_font_override("font", Fonts.ui())
+	_layout_caption()
 	btn_nb.visible = not G.settings.purist
 	grain.visible = true
 
@@ -305,7 +317,20 @@ func _slot_click(i: int) -> void:
 func _on_said(text: String) -> void:
 	caption.text = text
 	caption.modulate.a = 1.0
+	cap_bg.modulate.a = 1.0
+	_layout_caption()
 	_cap_t = 9.0
+
+## A caption that does not fit its line grows upward over the scene, on a dark band, instead of spilling onto the satchel.
+func _layout_caption() -> void:
+	var fsz := UI.fs(30)
+	var sz := Fonts.ui().get_multiline_string_size(caption.text, HORIZONTAL_ALIGNMENT_CENTER, W - 120, fsz)
+	var extra := maxf(0.0, sz.y + 10.0 - CAP_H)
+	caption.position = Vector2(60, SH + 6 - extra)
+	caption.size = Vector2(W - 120, CAP_H + extra)
+	cap_bg.visible = extra > 0.0
+	cap_bg.position = Vector2(0, SH - extra - 6)
+	cap_bg.size = Vector2(W, extra + 6 + 100)
 
 func _on_sfx_caption(text: String) -> void:
 	if not G.settings.captions:
@@ -329,6 +354,7 @@ func _process(delta: float) -> void:
 		_cap_t -= delta
 		if _cap_t < 1.5:
 			caption.modulate.a = maxf(0.0, _cap_t / 1.5)
+			cap_bg.modulate.a = caption.modulate.a
 	if _sfx_t > 0.0:
 		_sfx_t -= delta
 		sfx_label.modulate.a = clampf(_sfx_t / 0.8, 0.0, 1.0)

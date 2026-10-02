@@ -30,26 +30,43 @@ def mem_wall():
     v.dark = "0.0"
     return v
 
-def person(v, x, B, h=330, coat_w=70, hat=False, bun=True, bag=False, lantern=False, lean=0):
-    """a standing silhouette, feet at (x, B)"""
-    top = B - h * 0.64
-    coat = poly([(x - coat_w * 0.8, B), (x - coat_w * 0.5 + lean, top), (x + coat_w * 0.5 + lean, top), (x + coat_w * 0.8, B)])
-    v.add(coat, K, shadow_ok=True) if False else v.add(coat, K)
-    head = ellipse(x + lean, top - 38, 28, 32)
-    v.add(head, K)
+def person(v, x, B, h=330, coat_w=70, hat=False, bun=True, bag=False, lantern=False, lean=0, trousers=False):
+    """a standing profile silhouette (facing right), feet at (x, B)"""
+    top = B - h * 0.64                       # shoulder line
+    sw = coat_w * 0.55                       # half shoulder width
+    hem = B - (h * 0.36 if trousers else 8)
+    hw = coat_w * (0.58 if trousers else 0.88)
+    waist = coat_w * 0.44
+    # coat: rounded shoulders, a waist, a flared hem
+    v.add(poly([(x - hw, hem), (x - waist + lean * 0.35, top + h * 0.2), (x - sw + lean, top + 16), (x - sw + 12 + lean, top + 2),
+                (x + sw - 12 + lean, top + 2), (x + sw + lean, top + 16), (x + waist + lean * 0.35, top + h * 0.2), (x + hw, hem)]), K)
+    v.add(rect(x - 9 + lean, top - 14, 18, 24, 4), K)                              # neck
+    v.add(ellipse(x + lean, top - 38, 26, 31), K)                                   # head
+    v.add(poly([(x + lean + 20, top - 48), (x + lean + 38, top - 33), (x + lean + 21, top - 29)]), K)   # nose
     if bun:
-        v.add(ellipse(x - 20 + lean, top - 62, 14, 14), K)
+        v.add(ellipse(x - 22 + lean, top - 54, 15, 15), K)
+        v.add(ellipse(x - 18 + lean, top - 40, 12, 22), K)                          # hair at the nape
     if hat:
-        v.add(poly([(x - 36 + lean, top - 54), (x + 36 + lean, top - 54), (x + 28 + lean, top - 82), (x - 28 + lean, top - 82)]), K)
-        v.add(rect(x - 14 + lean, top - 62, 70, 10, 3), K)
-    v.add(line([(x + lean + 10, top + 24), (x + lean + 56, top + 90)], 20), K)
+        v.add(union(ellipse(x + lean, top - 62, 33, 20), rect(x + lean - 33, top - 62, 66, 14, 4)), K)  # flat cap
+        v.add(rect(x + lean + 8, top - 52, 50, 9, 4), K)                            # its peak
+    v.add(line([(x + lean + sw - 8, top + 20), (x + lean + sw + 42, top + 98)], 20), K)    # forward arm
+    v.add(line([(x + lean - sw + 8, top + 20), (x + lean - sw - 6, top + 116)], 18), K)    # hanging arm
+    if trousers:
+        v.add(rect(x - 27, hem - 4, 23, B - hem + 4, 4), K)
+        v.add(rect(x + 4, hem - 4, 23, B - hem + 4, 4), K)
+        v.add(rect(x - 34, B - 15, 32, 15, 5), K)
+        v.add(rect(x + 3, B - 15, 36, 15, 5), K)
+    else:
+        v.add(ellipse(x - 20, B - 4, 17, 7), K)
+        v.add(ellipse(x + 22, B - 4, 19, 7), K)
     if bag:
-        v.add(rect(x - coat_w * 0.7, top + 100, 54, 66, 8), K)
+        v.add(rect(x - coat_w * 0.8, top + 104, 54, 62, 8), K)
         v.add(line([(x + lean - 4, top + 8), (x - coat_w * 0.5, top + 110)], 8), K)
     if lantern:
-        v.add(rect(x + lean + 44, top + 80, 34, 46, 5), K)
-        v.add(arc(x + lean + 61, top + 80, 16, 180, 360, 5), K)
-        v.add(rect(x + lean + 51, top + 90, 14, 26, 3), SCREEN_T, glow=1.2, ink=True)
+        hx, hy = x + lean + sw + 46, top + 98                                       # held in the forward hand
+        v.add(rect(hx - 17, hy, 34, 46, 5), K)
+        v.add(arc(hx, hy, 17, 180, 360, 5), K)
+        v.add(rect(hx - 7, hy + 10, 14, 26, 3), SCREEN_T, glow=1.2, ink=True)
 
 @view("mem_puppets", CH)
 def mem_puppets():
@@ -62,9 +79,9 @@ def mem_puppets():
     with S("ruth_lantern"):
         v.layer(2); person(v, 330, B, 330, 64, bun=True, lantern=True)
     with S("tomas"):
-        v.layer(2); person(v, 560, B, 360, 78, hat=True, bun=False, bag=True)
+        v.layer(2); person(v, 560, B, 360, 78, hat=True, bun=False, bag=True, trousers=True)
     with S("tomas_lean"):
-        v.layer(2); person(v, 800, B, 360, 78, hat=True, bun=False, lean=26)
+        v.layer(2); person(v, 800, B, 360, 78, hat=True, bun=False, lean=26, trousers=True)
     with S("ruth_sit"):
         v.layer(2)
         v.add(rect(960, B - 130, 130, 24, 6), K)                         # seat
