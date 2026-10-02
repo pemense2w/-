@@ -1,0 +1,78 @@
+{
+ "id": "c5_chair",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_a_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_chair.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "moth5",
+   "rect": [
+    620,
+    380,
+    360,
+    360
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "chair_seat",
+   "rect": [
+    450,
+    140,
+    700,
+    700
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 560,
+   "r": 640,
+   "color": "#ffe0a0",
+   "when": null,
+   "intensity": 0.9,
+   "flicker": 0.06,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "moth_last",
+   "show": null,
+   "fx": "bob",
+   "z": 0,
+   "tex": "c5/c5_chair__moth_last.webp",
+   "rect": [
+    663,
+    471,
+    274,
+    143
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.35",
+ "ambient": "#3a4d5c"
+}

@@ -1,0 +1,44 @@
+{
+ "id": "end_jetty",
+ "chapter": "mem",
+ "kind": "ending",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "mem/end_jetty.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "ferry_end",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/end_jetty__ferry_end.webp",
+   "rect": [
+    938,
+    518,
+    644,
+    244
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.0",
+ "ambient": null
+}

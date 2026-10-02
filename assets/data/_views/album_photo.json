@@ -1,0 +1,29 @@
+{
+ "id": "album_photo",
+ "chapter": "mem",
+ "kind": "photo",
+ "size": [
+  1000,
+  600
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "mem/album_photo.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.0",
+ "ambient": null
+}

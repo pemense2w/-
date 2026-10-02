@@ -12,7 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import pc, reg
 
-MODULES = ["ch1", "ch2", "ch3", "ch4", "ch5", "ui", "items"]
+MODULES = ["ch1", "ch2", "ch3", "ch4", "ch5", "ui", "items", "memory"]
 
 def load_modules():
     for m in MODULES:

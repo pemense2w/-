@@ -1,0 +1,137 @@
+{
+ "id": "c5_a_books",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_a_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_books.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "books_row",
+   "rect": [
+    400,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "cabinet",
+   "rect": [
+    160,
+    620,
+    1280,
+    290
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "books",
+   "kind": "books",
+   "rect": [
+    400,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "args": {
+    "sprites": [
+     "book_red",
+     "book_green",
+     "book_pale",
+     "book_yellow"
+    ],
+    "slots": [
+     420,
+     600,
+     780,
+     960
+    ],
+    "key": "books5_order",
+    "readonly": true
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "book_red",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_books__book_red.webp",
+   "rect": [
+    416,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_green",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_books__book_green.webp",
+   "rect": [
+    596,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_pale",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_books__book_pale.webp",
+   "rect": [
+    776,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_yellow",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_books__book_yellow.webp",
+   "rect": [
+    956,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.22",
+ "ambient": "#3a4d5c"
+}

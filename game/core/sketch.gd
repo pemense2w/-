@@ -87,6 +87,12 @@ func _draw() -> void:
 				draw_arc(cc, 30, 0, TAU, 28, INK, 3.0)
 				draw_line(cc, cc + Vector2(0, -26).rotated(deg_to_rad([90.0, 30.0, 120.0][i])), INK, 3.0)
 				draw_string(ThemeDB.fallback_font, cc + Vector2(-8, 62), ["3", "1", "4"][i], HORIZONTAL_ALIGNMENT_LEFT, -1, 26, INK)
+		"mirror":
+			draw_line(Vector2(size.x / 2, 20), Vector2(size.x / 2, size.y - 20), INK, 3.0)
+			draw_line(Vector2(60, 70), Vector2(size.x / 2 - 20, 70), INK, 4.0)
+			draw_colored_polygon(PackedVector2Array([Vector2(size.x / 2 - 20, 58), Vector2(size.x / 2 - 4, 70), Vector2(size.x / 2 - 20, 82)]), INK)
+			draw_line(Vector2(size.x - 60, 120), Vector2(size.x / 2 + 20, 120), INK, 4.0)
+			draw_colored_polygon(PackedVector2Array([Vector2(size.x / 2 + 20, 108), Vector2(size.x / 2 + 4, 120), Vector2(size.x / 2 + 20, 132)]), INK)
 		"chart":
 			for i in 6:
 				draw_line(Vector2(40 + i * 40, 24), Vector2(40 + i * 40, 150), INK, 1.5)

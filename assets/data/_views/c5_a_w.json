@@ -1,0 +1,116 @@
+{
+ "id": "c5_a_w",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_a_s",
+  "right": "c5_a_n"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_w.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "shelf",
+   "rect": [
+    560,
+    120,
+    480,
+    520
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "cabinet",
+   "rect": [
+    560,
+    642,
+    480,
+    300
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bowl_w",
+   "rect": [
+    200,
+    530,
+    220,
+    140
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "plaque",
+   "rect": [
+    1160,
+    220,
+    300,
+    190
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "photo",
+   "rect": [
+    180,
+    180,
+    170,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "table",
+   "rect": [
+    180,
+    640,
+    250,
+    300
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "plaque",
+   "key": "world.plaque",
+   "rect": [
+    1160,
+    352,
+    300,
+    56
+   ],
+   "size": 20,
+   "color": "#d9c9a0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 1,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "pick(f('clock5_done'), 0.2, 0.24)",
+ "ambient": "#47545e"
+}

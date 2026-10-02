@@ -1,0 +1,56 @@
+{
+ "id": "c5_b_mirror",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_b_s",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_mirror.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "glass_b",
+   "rect": [
+    436,
+    96,
+    728,
+    808
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "refl5b",
+   "show": null,
+   "fx": "bob",
+   "z": 0,
+   "tex": "c5/c5_b_mirror__refl5b.webp",
+   "rect": [
+    638,
+    386,
+    262,
+    558
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2f6a6c"
+}

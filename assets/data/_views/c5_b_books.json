@@ -1,0 +1,182 @@
+{
+ "id": "c5_b_books",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_b_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_books.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "books_row",
+   "rect": [
+    480,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "cabinet",
+   "rect": [
+    160,
+    620,
+    1280,
+    290
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "punch",
+   "rect": [
+    700,
+    690,
+    200,
+    160
+   ],
+   "when": "f('books5_done') and not f('got_punch')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "books",
+   "kind": "mirror_books",
+   "rect": [
+    480,
+    170,
+    720,
+    400
+   ],
+   "when": null,
+   "args": {
+    "sprites": [
+     "book_red",
+     "book_green",
+     "book_pale",
+     "book_yellow"
+    ],
+    "slots": [
+     1040,
+     860,
+     680,
+     500
+    ],
+    "key": "books5_order",
+    "solved_flag": "books5_done",
+    "init": [
+     3,
+     1,
+     0,
+     2
+    ]
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "book_red",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__book_red.webp",
+   "rect": [
+    1036,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_green",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__book_green.webp",
+   "rect": [
+    856,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_pale",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__book_pale.webp",
+   "rect": [
+    676,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "book_yellow",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__book_yellow.webp",
+   "rect": [
+    496,
+    186,
+    184,
+    414
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cabinet_open5",
+   "show": "f('books5_done')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__cabinet_open5.webp",
+   "rect": [
+    156,
+    616,
+    1324,
+    338
+   ],
+   "pivot": null
+  },
+  {
+   "id": "punch5",
+   "show": "f('books5_done') and not f('got_punch')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_books__punch5.webp",
+   "rect": [
+    726,
+    682,
+    184,
+    206
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2f6a6c"
+}

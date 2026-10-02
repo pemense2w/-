@@ -10,7 +10,10 @@ func _build() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	key = args.get("key", "books_order")
 	if not G.s.flags.has(key):
-		G.s.flags[key] = args.get("init", [2, 0, 3, 1])
+		var init: Array = []
+		for v in args.get("init", [2, 0, 3, 1]):
+			init.append(int(v))      # JSON numbers arrive as floats
+		G.s.flags[key] = init
 	for sid in args.sprites:
 		pass
 
@@ -27,6 +30,10 @@ func _slot_at(x: float) -> int:
 
 func _gui_input(e: InputEvent) -> void:
 	if not (e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT):
+		return
+	if args.get("readonly", false):
+		accept_event()
+		G.say("books5.readonly")
 		return
 	if G.f(args.get("solved_flag", "books_sorted")):
 		G.say("books.locked")

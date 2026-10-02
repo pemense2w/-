@@ -19,6 +19,8 @@ signal settings_changed
 signal request_title
 signal puzzle_solved(pid: String)
 signal fx(name: String, data: Dictionary)
+signal choice_requested(options: Array)
+signal choice_made(key: String)
 
 const SAVE_VERSION := 1
 const SCENE_W := 1600
@@ -479,6 +481,17 @@ func finish_game(kind: String) -> void:
 		profile.endings.append(kind)
 	save_profile()
 	ending_requested.emit(kind)
+
+## present a choice (e.g. the last moth); returns the key of the option picked.  Tests set test_choice.
+var test_choice := ""
+func ask_choice(options: Array) -> String:
+	if test_mode:
+		return test_choice if test_choice != "" else str(options[0].key)
+	busy = true
+	choice_requested.emit(options)
+	var k: String = await choice_made
+	busy = false
+	return k
 
 func wait(sec: float) -> void:
 	if test_mode:

@@ -1,0 +1,56 @@
+{
+ "id": "c5_b_bowl",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_b_w",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_bowl.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "bowl",
+   "rect": [
+    420,
+    150,
+    760,
+    640
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "pell_b",
+   "show": "f('pell_home')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c5/c5_b_bowl__pell_b.webp",
+   "rect": [
+    603,
+    356,
+    304,
+    221
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2f6a6c"
+}

@@ -44,5 +44,12 @@
   "sketch": "valves",
   "title": "nb.valves.title",
   "text": "nb.valves.text"
+ },
+ {
+  "id": "mirror",
+  "ch": 5,
+  "sketch": "mirror",
+  "title": "nb.mirror.title",
+  "text": "nb.mirror.text"
  }
 ]

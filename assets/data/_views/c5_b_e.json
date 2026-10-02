@@ -1,0 +1,153 @@
+{
+ "id": "c5_b_e",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_b_s",
+  "right": "c5_b_n"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_e.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "grate",
+   "rect": [
+    560,
+    600,
+    480,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "armchair",
+   "rect": [
+    16,
+    540,
+    320,
+    430
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coal",
+   "rect": [
+    1260,
+    800,
+    140,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "vase",
+   "rect": [
+    700,
+    330,
+    90,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "painting",
+   "rect": [
+    420,
+    120,
+    480,
+    320
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "clock",
+   "rect": [
+    980,
+    270,
+    200,
+    206
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "candle",
+   "rect": [
+    460,
+    340,
+    100,
+    140
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": -80,
+   "r": 1500,
+   "color": "#aef2e6",
+   "when": null,
+   "intensity": 0.55,
+   "flicker": 0.0,
+   "hole": 0.45
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "bhand_h",
+   "z": 0,
+   "tex": "c5/c5_b_e__hand_h.webp",
+   "rect": [
+    1074,
+    326,
+    12,
+    49
+   ],
+   "pivot": [
+    1080,
+    366
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "bhand_m",
+   "z": 0,
+   "tex": "c5/c5_b_e__hand_m.webp",
+   "rect": [
+    1075,
+    310,
+    10,
+    68
+   ],
+   "pivot": [
+    1080,
+    366
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#2f6a6c"
+}

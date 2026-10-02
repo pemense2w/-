@@ -1,0 +1,87 @@
+{
+ "id": "c5_a_grate",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_a_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_grate.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "scrap",
+   "rect": [
+    540,
+    620,
+    540,
+    190
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "ash_pile",
+   "rect": [
+    1100,
+    780,
+    240,
+    110
+   ],
+   "when": "not f('got_ash')",
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [
+  {
+   "id": "sorry",
+   "key": "world.sorry",
+   "rect": [
+    560,
+    680,
+    480,
+    90
+   ],
+   "size": 64,
+   "color": "#3a2418",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 6,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "ash_pile",
+   "show": "not f('got_ash')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_grate__ash_pile.webp",
+   "rect": [
+    1116,
+    786,
+    244,
+    138
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.22",
+ "ambient": "#3a4d5c"
+}

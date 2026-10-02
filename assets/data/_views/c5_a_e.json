@@ -1,0 +1,181 @@
+{
+ "id": "c5_a_e",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_a_n",
+  "right": "c5_a_s"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_e.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "grate",
+   "rect": [
+    560,
+    600,
+    480,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "armchair",
+   "rect": [
+    1264,
+    540,
+    320,
+    430
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coal",
+   "rect": [
+    200,
+    800,
+    140,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "vase",
+   "rect": [
+    810,
+    330,
+    90,
+    150
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "painting",
+   "rect": [
+    700,
+    120,
+    480,
+    320
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "clock",
+   "rect": [
+    420,
+    270,
+    200,
+    206
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "candle",
+   "rect": [
+    1040,
+    340,
+    100,
+    140
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 1415,
+   "y": 770,
+   "r": 420,
+   "color": "#ffe0a0",
+   "when": "f('ticket_valid')",
+   "intensity": 0.8,
+   "flicker": 0.06,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "hand_h",
+   "z": 0,
+   "tex": "c5/c5_a_e__hand_h.webp",
+   "rect": [
+    514,
+    326,
+    12,
+    49
+   ],
+   "pivot": [
+    520,
+    366
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "hand_m",
+   "z": 0,
+   "tex": "c5/c5_a_e__hand_m.webp",
+   "rect": [
+    515,
+    310,
+    10,
+    68
+   ],
+   "pivot": [
+    520,
+    366
+   ]
+  },
+  {
+   "id": "armchair_front",
+   "show": "f('ticket_valid')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_e__armchair_front.webp",
+   "rect": [
+    1232,
+    556,
+    368,
+    444
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moth5",
+   "show": "f('ticket_valid')",
+   "fx": "bob",
+   "z": 0,
+   "tex": "c5/c5_a_e__moth5.webp",
+   "rect": [
+    1345,
+    724,
+    140,
+    74
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(f('clock5_done'), 0.2, 0.24)",
+ "ambient": "#47545e"
+}

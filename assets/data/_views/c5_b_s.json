@@ -1,0 +1,116 @@
+{
+ "id": "c5_b_s",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_b_w",
+  "right": "c5_b_e"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_s.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "mirror",
+   "rect": [
+    100,
+    190,
+    220,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "door",
+   "rect": [
+    584,
+    94,
+    432,
+    856
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "coat",
+   "rect": [
+    1140,
+    150,
+    230,
+    550
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "oar_stand",
+   "rect": [
+    370,
+    840,
+    120,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "mat",
+   "rect": [
+    580,
+    922.0,
+    440,
+    88
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": -80,
+   "r": 1500,
+   "color": "#aef2e6",
+   "when": null,
+   "intensity": 0.55,
+   "flicker": 0.0,
+   "hole": 0.45
+  }
+ ],
+ "texts": [
+  {
+   "id": "mat",
+   "key": "world.return",
+   "rect": [
+    600,
+    944,
+    400,
+    44
+   ],
+   "size": 28,
+   "color": "#d9c9a0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 6,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#2f6a6c"
+}

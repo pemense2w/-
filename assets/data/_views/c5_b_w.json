@@ -1,0 +1,167 @@
+{
+ "id": "c5_b_w",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_b_n",
+  "right": "c5_b_s"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_w.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "shelf",
+   "rect": [
+    560,
+    120,
+    480,
+    520
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "cabinet",
+   "rect": [
+    560,
+    642,
+    480,
+    300
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "bowl_w",
+   "rect": [
+    1180,
+    530,
+    220,
+    140
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "plaque",
+   "rect": [
+    140,
+    220,
+    300,
+    190
+   ],
+   "when": "not f('plaque_moved')",
+   "kind": null
+  },
+  {
+   "id": "frag9",
+   "rect": [
+    240,
+    330,
+    200,
+    90
+   ],
+   "when": "f('plaque_moved') and not f('got_frag9')",
+   "kind": null
+  },
+  {
+   "id": "photo",
+   "rect": [
+    1250,
+    180,
+    170,
+    220
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "table",
+   "rect": [
+    1170,
+    640,
+    250,
+    300
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": -80,
+   "r": 1500,
+   "color": "#aef2e6",
+   "when": null,
+   "intensity": 0.55,
+   "flicker": 0.0,
+   "hole": 0.45
+  }
+ ],
+ "texts": [
+  {
+   "id": "plaque",
+   "key": "world.plaque_b",
+   "rect": [
+    140,
+    352,
+    300,
+    56
+   ],
+   "size": 22,
+   "color": "#d9c9a0",
+   "rot": 0,
+   "font": "world",
+   "align": "center",
+   "when": null,
+   "literal": null,
+   "spacing": 2,
+   "outline": null
+  }
+ ],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "plaque_gap",
+   "show": "f('plaque_moved')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_w__plaque_gap.webp",
+   "rect": [
+    156,
+    342,
+    304,
+    104
+   ],
+   "pivot": null
+  },
+  {
+   "id": "frag9",
+   "show": "f('plaque_moved') and not f('got_frag9')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_w__frag9.webp",
+   "rect": [
+    346,
+    350,
+    140,
+    88
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#2f6a6c"
+}

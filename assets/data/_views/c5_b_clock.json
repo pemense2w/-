@@ -1,0 +1,114 @@
+{
+ "id": "c5_b_clock",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_b_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_clock.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "fish_engraving",
+   "rect": [
+    880,
+    400,
+    110,
+    110
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "hatch",
+   "rect": [
+    690,
+    690,
+    220,
+    120
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [
+  {
+   "id": "clock",
+   "kind": "clock",
+   "rect": [
+    530,
+    110,
+    540,
+    540
+   ],
+   "when": null,
+   "args": {
+    "cx": 800,
+    "cy": 380,
+    "knob_h": [
+     620,
+     880
+    ],
+    "knob_m": [
+     980,
+     880
+    ],
+    "step_m": 5,
+    "prefix": "mclock",
+    "lock_flag": "clock5_done"
+   }
+  }
+ ],
+ "sprites": [
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "bhand_h",
+   "z": 0,
+   "tex": "c5/c5_b_clock__hand_h.webp",
+   "rect": [
+    783,
+    216,
+    70,
+    237
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "bhand_m",
+   "z": 0,
+   "tex": "c5/c5_b_clock__hand_m.webp",
+   "rect": [
+    788,
+    141,
+    60,
+    326
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2f6a6c"
+}

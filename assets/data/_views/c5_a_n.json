@@ -1,0 +1,111 @@
+{
+ "id": "c5_a_n",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_a_w",
+  "right": "c5_a_e"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_n.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "window",
+   "rect": [
+    590,
+    130,
+    420,
+    410
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "desk",
+   "rect": [
+    320,
+    635.0,
+    960,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "barometer",
+   "rect": [
+    1196,
+    216,
+    168,
+    168
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "sill",
+   "rect": [
+    505,
+    541.0,
+    590,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "drawer",
+   "rect": [
+    630,
+    735,
+    340,
+    150
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 280,
+   "r": 520,
+   "color": "#ffd890",
+   "when": null,
+   "intensity": 0.5,
+   "flicker": 0.05,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "far_light5",
+   "show": null,
+   "fx": "pulse",
+   "z": 0,
+   "tex": "c5/c5_a_n__far_light5.webp",
+   "rect": [
+    789,
+    264,
+    22,
+    30
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "pick(f('clock5_done'), 0.2, 0.24)",
+ "ambient": "#47545e"
+}

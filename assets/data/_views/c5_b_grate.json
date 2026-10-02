@@ -1,0 +1,106 @@
+{
+ "id": "c5_b_grate",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_b_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_grate.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "grate_b",
+   "rect": [
+    200,
+    560,
+    1200,
+    340
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "letter",
+   "rect": [
+    620,
+    620,
+    360,
+    240
+   ],
+   "when": "f('letter_done') and not f('got_letter')",
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": 760,
+   "r": 520,
+   "color": "#ffb860",
+   "when": "f('backfire') and not f('letter_done')",
+   "intensity": 1.0,
+   "flicker": 0.1,
+   "hole": 1.0
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "ash_in",
+   "show": "f('ash_placed')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_grate__ash_in.webp",
+   "rect": [
+    536,
+    722,
+    544,
+    112
+   ],
+   "pivot": null
+  },
+  {
+   "id": "flames_back",
+   "show": "f('backfire') and not f('letter_done')",
+   "fx": "flicker",
+   "z": 0,
+   "tex": "c5/c5_b_grate__flames_back.webp",
+   "rect": [
+    552,
+    645,
+    436,
+    135
+   ],
+   "pivot": null
+  },
+  {
+   "id": "letter_whole",
+   "show": "f('letter_done') and not f('got_letter')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_b_grate__letter_whole.webp",
+   "rect": [
+    630,
+    627,
+    376,
+    276
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": "0.1",
+ "ambient": "#2f6a6c"
+}

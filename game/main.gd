@@ -51,6 +51,7 @@ func _ready() -> void:
 	G.ending_requested.connect(_on_ending)
 	G.chapter_card.connect(_on_chapter_card)
 	G.fx.connect(_on_fx)
+	G.choice_requested.connect(_on_choice)
 	G.request_title.connect(show_title)
 	G.settings_changed.connect(_apply_settings)
 	L.language_changed.connect(_relabel)
@@ -439,7 +440,8 @@ func _open_modal(n: Control) -> void:
 		return
 	modal = n
 	overlay.add_child(n)
-	n.tree_exited.connect(func(): modal = null)
+	Snd.play("ui_open")
+	n.tree_exited.connect(func(): modal = null; Snd.play("ui_close"))
 
 func open_notebook() -> void:
 	if G.settings.purist or modal != null or not G.in_game:
@@ -515,6 +517,12 @@ func _begin(fn: Callable) -> void:
 	modal = null
 	fn.call()
 
+func _on_choice(options: Array) -> void:
+	var p := ChoicePanel.new()
+	overlay.add_child(p)
+	p.setup(options)
+	p.chosen.connect(func(k): G.choice_made.emit(k))
+
 func _on_fx(name: String, _data: Dictionary) -> void:
 	if name == "era_flip" and not G.test_mode:
 		var fl := ColorRect.new()
@@ -552,21 +560,35 @@ func _on_chapter_card(n: int) -> void:
 	tw.tween_callback(func(): card.queue_free(); G.busy = false)
 
 func _on_memory(n: int) -> void:
-	if not ResourceLoader.exists("res://game/core/memory_player.gd") or G.test_mode:
+	if G.test_mode:
 		G.memory_done.emit()
 		return
-	var p: Control = load("res://game/core/memory_player.gd").new()
+	var p := StagePlayer.new()
 	overlay.add_child(p)
 	p.play(n)
-	p.finished.connect(func(): p.queue_free(); G.memory_done.emit())
+	p.finished.connect(func():
+		p.queue_free()
+		Snd.stop_music()
+		Snd.ambience(Snd.current_amb, true)
+		G.memory_done.emit())
 
 func _on_ending(kind: String) -> void:
-	if not ResourceLoader.exists("res://game/core/ending_player.gd") or G.test_mode:
+	if G.test_mode:
 		return
-	var p: Control = load("res://game/core/ending_player.gd").new()
+	G.busy = true
+	var p := StagePlayer.new()
 	overlay.add_child(p)
 	p.play(kind)
-	p.finished.connect(func(): p.queue_free(); G.quit_to_title())
+	p.finished.connect(func():
+		p.queue_free()
+		G.busy = false
+		Snd.stop_music()
+		var es = load("res://game/core/end_screen.gd").new()
+		overlay.add_child(es)
+		es.setup(kind)
+		es.back_to_title.connect(func(): es.queue_free(); G.quit_to_title())
+		es.start_over.connect(func(): es.queue_free(); G.new_game())
+		es.open_album.connect(func(): open_album()))
 
 # --------------------------------------------------------------- test hooks
 func click_hotspot(id: String) -> bool:

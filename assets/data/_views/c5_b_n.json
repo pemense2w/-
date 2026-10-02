@@ -1,0 +1,85 @@
+{
+ "id": "c5_b_n",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": "c5_b_e",
+  "right": "c5_b_w"
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_b_n.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "window",
+   "rect": [
+    590,
+    130,
+    420,
+    410
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "desk",
+   "rect": [
+    320,
+    635.0,
+    960,
+    88
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "barometer",
+   "rect": [
+    236,
+    216,
+    168,
+    168
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "drawer",
+   "rect": [
+    630,
+    735,
+    340,
+    150
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [
+  {
+   "x": 800,
+   "y": -80,
+   "r": 1500,
+   "color": "#aef2e6",
+   "when": null,
+   "intensity": 0.55,
+   "flicker": 0.0,
+   "hole": 0.45
+  }
+ ],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.12",
+ "ambient": "#2f6a6c"
+}

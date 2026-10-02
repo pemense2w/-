@@ -190,11 +190,16 @@ class View:
     def add(self, geom, color, d=None, grad=None, glow=0.0, ink=False, alpha=1.0, grad_dir="v"):
         if geom is None or geom.is_empty:
             return geom
+        geom, color, grad = self._xf(geom, color, grad)
         d = self._d if d is None else d
         self.shapes.append(Shape(geom=geom, color=col(color), grad=(col(grad) if grad else None), d=d, ink=ink,
                                  glow=glow, group=self._group, variant=self._variant, alpha=alpha, grad_dir=grad_dir,
                                  z=len(self.shapes)))
         return geom
+
+    def _xf(self, geom, color, grad):
+        """hook for subclasses (mirroring / recolouring)"""
+        return geom, color, grad
 
     def layer(self, d):
         """set the default paper layer for following shapes"""

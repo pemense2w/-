@@ -1,0 +1,29 @@
+{
+ "id": "mem_wall",
+ "chapter": "mem",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "mem/mem_wall.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [],
+ "meta": {},
+ "dark": "0.0",
+ "ambient": null
+}

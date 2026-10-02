@@ -1,0 +1,402 @@
+{
+ "id": "mem_puppets",
+ "chapter": "mem",
+ "kind": "sheet",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": null,
+  "left": null,
+  "right": null
+ },
+ "bg": [],
+ "hotspots": [],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "ruth",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__ruth.webp",
+   "rect": [
+    60,
+    64,
+    134,
+    304
+   ],
+   "pivot": null
+  },
+  {
+   "id": "ruth_lantern",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__ruth_lantern.webp",
+   "rect": [
+    270,
+    64,
+    148,
+    304
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tomas",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__tomas.webp",
+   "rect": [
+    489,
+    39,
+    145,
+    329
+   ],
+   "pivot": null
+  },
+  {
+   "id": "tomas_lean",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__tomas_lean.webp",
+   "rect": [
+    729,
+    39,
+    171,
+    329
+   ],
+   "pivot": null
+  },
+  {
+   "id": "ruth_sit",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__ruth_sit.webp",
+   "rect": [
+    952,
+    0,
+    216,
+    368
+   ],
+   "pivot": null
+  },
+  {
+   "id": "chair",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__chair.webp",
+   "rect": [
+    1242,
+    22,
+    156,
+    346
+   ],
+   "pivot": null
+  },
+  {
+   "id": "door",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__door.webp",
+   "rect": [
+    1432,
+    0,
+    166,
+    368
+   ],
+   "pivot": null
+  },
+  {
+   "id": "boat",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__boat.webp",
+   "rect": [
+    52,
+    442,
+    596,
+    266
+   ],
+   "pivot": null
+  },
+  {
+   "id": "oar",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__oar.webp",
+   "rect": [
+    685,
+    501,
+    348,
+    204
+   ],
+   "pivot": null
+  },
+  {
+   "id": "wave",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__wave.webp",
+   "rect": [
+    0,
+    840,
+    1518,
+    138
+   ],
+   "pivot": null
+  },
+  {
+   "id": "wave_big",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__wave_big.webp",
+   "rect": [
+    0,
+    476,
+    1528,
+    168
+   ],
+   "pivot": null
+  },
+  {
+   "id": "ferry",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__ferry.webp",
+   "rect": [
+    1092,
+    472,
+    476,
+    236
+   ],
+   "pivot": null
+  },
+  {
+   "id": "lighthouse",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__lighthouse.webp",
+   "rect": [
+    72,
+    312,
+    176,
+    656
+   ],
+   "pivot": null
+  },
+  {
+   "id": "lamp_lit",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__lamp_lit.webp",
+   "rect": [
+    118,
+    382,
+    84,
+    60
+   ],
+   "pivot": null
+  },
+  {
+   "id": "jetty",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__jetty.webp",
+   "rect": [
+    312,
+    832,
+    916,
+    168
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moon",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__moon.webp",
+   "rect": [
+    1262,
+    582,
+    156,
+    156
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moon_crescent",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__moon_crescent.webp",
+   "rect": [
+    1262,
+    762,
+    143,
+    156
+   ],
+   "pivot": null
+  },
+  {
+   "id": "moth",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__moth.webp",
+   "rect": [
+    1417,
+    496,
+    126,
+    74
+   ],
+   "pivot": null
+  },
+  {
+   "id": "cloud",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__cloud.webp",
+   "rect": [
+    242,
+    62,
+    556,
+    196
+   ],
+   "pivot": null
+  },
+  {
+   "id": "bolt",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__bolt.webp",
+   "rect": [
+    832,
+    32,
+    106,
+    286
+   ],
+   "pivot": null
+  },
+  {
+   "id": "window",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__window.webp",
+   "rect": [
+    1012,
+    282,
+    236,
+    466
+   ],
+   "pivot": null
+  },
+  {
+   "id": "desk",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__desk.webp",
+   "rect": [
+    1252,
+    612,
+    296,
+    186
+   ],
+   "pivot": null
+  },
+  {
+   "id": "clock_small",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__clock_small.webp",
+   "rect": [
+    1182,
+    482,
+    156,
+    156
+   ],
+   "pivot": null
+  },
+  {
+   "id": "bell",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__bell.webp",
+   "rect": [
+    802,
+    512,
+    196,
+    176
+   ],
+   "pivot": null
+  },
+  {
+   "id": "hand",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__hand.webp",
+   "rect": [
+    974,
+    32,
+    198,
+    266
+   ],
+   "pivot": null
+  },
+  {
+   "id": "rain",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__rain.webp",
+   "rect": [
+    0,
+    0,
+    1409,
+    774
+   ],
+   "pivot": null
+  },
+  {
+   "id": "table_lamp",
+   "show": null,
+   "fx": null,
+   "z": 0,
+   "tex": "mem/mem_puppets__table_lamp.webp",
+   "rect": [
+    52,
+    682,
+    296,
+    302
+   ],
+   "pivot": null
+  }
+ ],
+ "meta": {},
+ "dark": null,
+ "ambient": null
+}

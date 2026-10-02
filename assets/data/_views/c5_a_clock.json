@@ -1,0 +1,162 @@
+{
+ "id": "c5_a_clock",
+ "chapter": "c5",
+ "kind": "view",
+ "size": [
+  1600,
+  1000
+ ],
+ "nav": {
+  "back": "c5_a_e",
+  "left": null,
+  "right": null
+ },
+ "bg": [
+  {
+   "variant": null,
+   "tex": "c5/c5_a_clock.webp",
+   "when": null
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "fish_engraving",
+   "rect": [
+    880,
+    400,
+    110,
+    110
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "hatch",
+   "rect": [
+    690,
+    690,
+    220,
+    120
+   ],
+   "when": null,
+   "kind": null
+  },
+  {
+   "id": "logpage",
+   "rect": [
+    710,
+    696,
+    100,
+    110
+   ],
+   "when": "f('clock5_done') and not f('got_logpage')",
+   "kind": null
+  },
+  {
+   "id": "timetable",
+   "rect": [
+    800,
+    700,
+    100,
+    100
+   ],
+   "when": "f('clock5_done') and not f('got_timetable')",
+   "kind": null
+  },
+  {
+   "id": "clock_face",
+   "rect": [
+    530,
+    110,
+    540,
+    540
+   ],
+   "when": null,
+   "kind": null
+  }
+ ],
+ "lights": [],
+ "texts": [],
+ "widgets": [],
+ "sprites": [
+  {
+   "id": "hatch_open5",
+   "show": "f('clock5_done')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_clock__hatch_open5.webp",
+   "rect": [
+    626,
+    686,
+    324,
+    168
+   ],
+   "pivot": null
+  },
+  {
+   "id": "logpage5",
+   "show": "f('clock5_done') and not f('got_logpage')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_clock__logpage5.webp",
+   "rect": [
+    711,
+    698,
+    134,
+    148
+   ],
+   "pivot": null
+  },
+  {
+   "id": "timetable5",
+   "show": "f('clock5_done') and not f('got_timetable')",
+   "fx": null,
+   "z": 0,
+   "tex": "c5/c5_a_clock__timetable5.webp",
+   "rect": [
+    798,
+    704,
+    136,
+    138
+   ],
+   "pivot": null
+  },
+  {
+   "id": "hand_h",
+   "show": null,
+   "fx": "hand_h",
+   "z": 0,
+   "tex": "c5/c5_a_clock__hand_h.webp",
+   "rect": [
+    783,
+    216,
+    70,
+    237
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  },
+  {
+   "id": "hand_m",
+   "show": null,
+   "fx": "hand_m",
+   "z": 0,
+   "tex": "c5/c5_a_clock__hand_m.webp",
+   "rect": [
+    788,
+    141,
+    60,
+    326
+   ],
+   "pivot": [
+    800,
+    380
+   ]
+  }
+ ],
+ "meta": {},
+ "dark": "0.22",
+ "ambient": "#3a4d5c"
+}

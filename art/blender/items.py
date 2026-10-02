@@ -245,3 +245,46 @@ def _chain(v):
     v.layer(1)
     for k in range(9):
         v.add(ring(110 + k * 22, 190 + math.sin(k * 0.7) * 40, 26, 11), "#8a8e90")
+
+@item("ash")
+def _ash(v):
+    v.layer(1)
+    v.add(poly([(80, 300), (150, 200), (240, 190), (320, 300)]), "#8a8480")
+    v.ink(ellipse(200, 250, 70, 26), "#a09a96")
+    v.ink(ellipse(150, 280, 30, 12), "#6f6a66")
+
+@item("letter")
+def _letter(v):
+    v.layer(1)
+    paper_sheet(v, 90, 80, 210, 240, "#ece4c8", ang=-4, d=1, lines=7)
+    v.ink(rect(120, 110, 100, 10), "#7a2a22")
+
+@item("logpage")
+def _logpage(v):
+    v.layer(1)
+    v.add(poly([(100, 70), (290, 60), (300, 330), (110, 340)]), "#d9cfae")
+    v.ink(poly([(100, 70), (150, 80), (120, 140), (100, 120)]), "#bdb08c")
+    for k in range(6):
+        v.ink(line([(130, 120 + k * 36), (270 - (k % 3) * 24, 116 + k * 36)], 4), INK)
+
+@item("timetable")
+def _timetable(v):
+    v.layer(1)
+    paper_sheet(v, 100, 90, 190, 220, "#cfc4a3", ang=5, d=1, lines=5)
+    v.ink(rect(130, 120, 100, 12), "#7a2a22")
+
+@item("punch")
+def _punch(v):
+    v.layer(1)
+    v.add(rect(120, 200, 160, 70, 12), "#3a3d3f")
+    v.add(rect(180, 120, 24, 90, 8), "#3a3d3f")
+    v.add(ellipse(192, 118, 44, 16), "#c9a24d")
+    v.add(rect(130, 270, 140, 26, 4), "#6e7274")
+
+@item("ticket_ok")
+def _ticket_ok(v):
+    v.layer(1)
+    paper_sheet(v, 70, 130, 250, 130, "#e0d3ae", ang=8, d=1)
+    v.ink(rot(rect(94, 160, 100, 12), 8, origin=(195, 195)), "#2a6a3a")
+    v.add(rot(ellipse(150, 230, 12, 12), 8, origin=(195, 195)), "#10181a")
+    v.add(rot(ellipse(250, 218, 12, 12), 8, origin=(195, 195)), "#10181a")

@@ -261,6 +261,10 @@ func _process(delta: float) -> void:
 					e["cur"] = target
 				e.cur = target if (G.test_mode or calm) else move_toward(e.cur, target, delta * 90.0)
 				n.position.y = e.base.y + e.cur
+			"bhand_h":
+				n.rotation_degrees = float(G.fi("mclock_h")) * 30.0 + float(G.fi("mclock_m")) * 0.5
+			"bhand_m":
+				n.rotation_degrees = float(G.fi("mclock_m")) * 6.0
 			"mhand_h":
 				n.rotation_degrees = -(float(G.fi("mclock_h")) * 30.0 + float(G.fi("mclock_m")) * 0.5)
 			"mhand_m":
