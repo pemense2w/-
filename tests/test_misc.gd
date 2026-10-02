@@ -89,8 +89,8 @@ func _run() -> void:
 	G.set_setting("lang", "en")
 
 	# ---- hints: first tier at once, later tiers wait, then give the answer
-	G.test_mode = false
 	G.new_game(); await tick(2)
+	G.test_mode = false     # hint timing is real time; everything else stays instant
 	var h1: Dictionary = G.request_hint()
 	check(h1.tier == 1 and h1.wait == 0.0, "first hint is tier 1 immediately")
 	var h2: Dictionary = G.request_hint()
@@ -117,6 +117,16 @@ func _run() -> void:
 		check(G.views.has(G.s.view), "chapter %d starts in a real view (%s)" % [n, G.s.view])
 		check(int(G.s.chapter) == n, "chapter number %d recorded" % n)
 		check(int(G.profile.unlocked) >= n, "chapter %d unlocked" % n)
+	# ---- hotspots: a small hotspot inside a bigger one is the one that gets the click
+	G.select_chapter(1); await tick(2)
+	G.setf("clock_set"); await at("c1_clock"); await tick(2)
+	var mh: Hotspot = main.view.get_hotspot("match")
+	check(mh != null and mh.visible, "the match is offered once the clock is set")
+	var centre: Vector2 = mh.position + mh.size / 2.0
+	check(main.view.hit_test(centre) == mh, "a click on the match lands on the match, not on the hatch around it")
+	check(main.click_hotspot("match"), "the match can be clicked")
+	await tick(2)
+	check(G.has("match"), "the match goes into the satchel")
 	# ---- endings are recorded in the profile
 	G.finish_game("B")
 	check("B" in G.profile.endings and G.profile.finished, "ending recorded in profile")

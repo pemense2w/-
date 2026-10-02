@@ -82,15 +82,31 @@ func setup(d: Dictionary) -> void:
 			n.position = Vector2(r[0], r[1])
 		add_child(n)
 		spr[sd.id] = {"n": n, "d": sd, "base": n.position, "phase": randf() * TAU, "mod": n.modulate}
-	for hd in d.get("hotspots", []):
+	# Overlapping hotspots: the smaller (more specific) one sits on top, so a match inside a hatch, a tin on a shelf,
+	# a fragment under a plank are never swallowed by the bigger area behind them.  Equal areas: the one defined first wins.
+	var hlist: Array = d.get("hotspots", [])
+	var order := range(hlist.size())
+	order.sort_custom(func(a, b):
+		var ra: Array = hlist[a].rect
+		var rb: Array = hlist[b].rect
+		var aa := float(ra[2]) * float(ra[3])
+		var ab := float(rb[2]) * float(rb[3])
+		if aa != ab:
+			return aa > ab
+		return a > b)
+	var made := {}
+	for i in order:
+		var hd: Dictionary = hlist[i]
 		var h := Hotspot.new()
 		h.hid = hd.id
 		var r: Array = hd.rect
 		h.position = Vector2(r[0], r[1])
 		h.size = Vector2(r[2], r[3])
-		h.activated.connect(func(i): hotspot_pressed.emit(i))
+		h.activated.connect(func(id): hotspot_pressed.emit(id))
 		add_child(h)
-		hots.append({"n": h, "d": hd})
+		made[i] = h
+	for i in hlist.size():
+		hots.append({"n": made[i], "d": hlist[i]})
 	for td in d.get("texts", []):
 		var lb := Label.new()
 		lb.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -181,6 +197,27 @@ func get_hotspot(id: String) -> Hotspot:
 			if first == null:
 				first = h.n
 	return first
+
+## The hotspot a click at this scene position would land on (topmost visible), or null.
+func hit_test(p: Vector2) -> Hotspot:
+	var kids := get_children()
+	for i in range(kids.size() - 1, -1, -1):
+		var c = kids[i]
+		if c is Hotspot and c.visible and Rect2(c.position, c.size).has_point(p):
+			return c
+	return null
+
+## True if some point of this hotspot's area really lands on it (i.e. nothing visible sits on top of all of it).
+func reachable(id: String) -> bool:
+	var h := get_hotspot(id)
+	if h == null:
+		return false
+	for fy in [0.5, 0.25, 0.75, 0.1, 0.9]:
+		for fx in [0.5, 0.25, 0.75, 0.1, 0.9]:
+			var hit := hit_test(h.position + Vector2(h.size.x * fx, h.size.y * fy))
+			if hit == h:
+				return true
+	return false
 
 func refresh() -> void:
 	# background variant: first match wins (default variant last)

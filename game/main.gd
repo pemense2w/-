@@ -636,6 +636,9 @@ func click_hotspot(id: String) -> bool:
 	var h := view.get_hotspot(id)
 	if h == null or not h.visible:
 		return false
+	if not view.reachable(id):
+		push_warning("hotspot '%s' is covered by another hotspot in %s" % [id, G.s.view])
+		return false
 	G.activate(id)
 	return true
 
