@@ -176,7 +176,13 @@ func _bar_button(pos: Vector2, w: int, cb: Callable) -> Button:
 	add_child(b)
 	return b
 
+func _apply_theme_font() -> void:
+	var th := Theme.new()
+	th.default_font = Fonts.ui()
+	theme = th
+
 func _relabel() -> void:
+	_apply_theme_font()
 	btn_nb.text = L.t("ui.notebook")
 	btn_pell.text = L.t("ui.ask_pell")
 	btn_menu.text = L.t("ui.menu")
@@ -188,6 +194,7 @@ func _relabel() -> void:
 	_on_changed()
 
 func _apply_settings() -> void:
+	_apply_theme_font()
 	caption.add_theme_font_size_override("font_size", UI.fs(30))
 	caption.add_theme_font_override("font", Fonts.ui())
 	btn_nb.visible = not G.settings.purist

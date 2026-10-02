@@ -15,7 +15,7 @@ func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	var bgc := ColorRect.new()
 	bgc.color = Color("#070b0d")
-	bgc.size = size
+	bgc.size = Vector2(1600, 1200)
 	add_child(bgc)
 	var v: Dictionary = G.views.get("ui_title", {})
 	if not v.is_empty():
@@ -29,17 +29,21 @@ func _ready() -> void:
 		add_child(tr)
 	var shade := ColorRect.new()
 	shade.color = Color(0, 0, 0, 0.18)
-	shade.size = size
+	shade.size = Vector2(1600, 1200)
 	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(shade)
 	var t := UI.label(L.t("game.title"), 124, Color("#f4e2b4"), HORIZONTAL_ALIGNMENT_CENTER, false)
 	t.add_theme_font_override("font", Fonts.world())
 	t.add_theme_font_size_override("font_size", 128)
+	t.add_theme_color_override("font_outline_color", Color(0.03, 0.05, 0.07, 0.85))
+	t.add_theme_constant_override("outline_size", 10)
 	t.position = Vector2(0, 90)
 	t.size = Vector2(1600, 160)
 	add_child(t)
 	var sub := UI.label(L.t("game.tagline"), 28, Color("#cbbf9f"), HORIZONTAL_ALIGNMENT_CENTER, false)
 	sub.add_theme_font_override("font", Fonts.world())
+	sub.add_theme_color_override("font_outline_color", Color(0.03, 0.05, 0.07, 0.9))
+	sub.add_theme_constant_override("outline_size", 8)
 	sub.position = Vector2(200, 250)
 	sub.size = Vector2(1200, 40)
 	add_child(sub)
