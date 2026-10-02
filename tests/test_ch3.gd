@@ -126,6 +126,9 @@ func _run() -> void:
 	mw.marker = float(mw.args.target[0]) - mw.position.x
 	await mouse(mw, Vector2(100, 100))
 	flag("moored", "the line catches the post")
+	await tick(4)
+	check(int(G.s.chapter) == 4, "chapter 3 hands over to chapter 4")
+	check(G.views.has(G.s.view), "chapter 4 opens in a real view (%s)" % G.s.view)
 	var scr = load("res://game/chapters/ch3.gd").new()
 	for p in scr.puzzles():
 		for t in 3:

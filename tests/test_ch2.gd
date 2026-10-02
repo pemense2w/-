@@ -144,6 +144,9 @@ func _run() -> void:
 	check(G.f("oar_l") and G.f("oar_r"), "both oars in place")
 	await click("push_off")
 	flag("launched")
+	await tick(4)
+	check(int(G.s.chapter) == 3, "chapter 2 hands over to chapter 3")
+	check(G.views.has(G.s.view), "chapter 3 opens in a real view (%s)" % G.s.view)
 	# hints
 	var scr = load("res://game/chapters/ch2.gd").new()
 	for p in scr.puzzles():

@@ -531,6 +531,11 @@ func _on_choice(options: Array) -> void:
 	p.chosen.connect(func(k): G.choice_made.emit(k))
 
 func _on_fx(name: String, _data: Dictionary) -> void:
+	if name == "buoy_again":
+		var w := widget("rhythm")
+		if w != null and w.has_method("replay"):
+			w.replay()
+		return
 	if name == "era_flip" and not G.test_mode:
 		var fl := ColorRect.new()
 		fl.color = Color(1, 0.96, 0.85, 0.9) if G.era() == "then" else Color(0.75, 0.85, 0.95, 0.9)

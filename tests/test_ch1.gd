@@ -138,6 +138,10 @@ func _run() -> void:
 	await at("c1_s")
 	await click("door_exit")
 	check(true, "exit clicked")
+	await tick(4)
+	check(int(G.s.chapter) == 2, "chapter 1 hands over to chapter 2")
+	check(G.views.has(G.s.view), "chapter 2 opens in a real view (%s)" % G.s.view)
+	check(G.has("lantern_lit") or G.has("lantern"), "the lantern comes along")
 	# hints: every puzzle has all three tiers
 	var scr = load("res://game/chapters/ch1.gd").new()
 	for p in scr.puzzles():

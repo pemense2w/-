@@ -120,6 +120,9 @@ func _run() -> void:
 	await at("c4_lamp_a")
 	await use("lantern_lit", "wick")
 	flag("lamp_lit", "the far light is lit")
+	await tick(4)
+	check(int(G.s.chapter) == 5, "chapter 4 hands over to chapter 5")
+	check(G.views.has(G.s.view), "chapter 5 opens in a real view (%s)" % G.s.view)
 	var scr = load("res://game/chapters/ch4.gd").new()
 	for p in scr.puzzles():
 		for t in 3:
