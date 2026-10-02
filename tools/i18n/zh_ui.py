@@ -10,7 +10,7 @@ S = {
  "pause.settings": "设置", "pause.title_screen": "返回标题",
  "settings.title": "设置", "settings.language": "语言",
  "settings.amb": "环境声音量", "settings.sfx": "音效音量", "settings.music": "音乐音量",
- "settings.text_size": "文字大小", "settings.plain_font": "更朴素的界面字体",
+ "settings.text_size": "文字大小", "settings.hotspot_glow": "高亮鼠标所指的物件", "settings.plain_font": "更朴素的界面字体",
  "settings.reduce_motion": "减少动态效果", "settings.startle": "惊吓时刻",
  "settings.no_timing": "无限时（跳过限时环节）", "settings.purist": "纯粹模式（关闭笔记本）",
  "settings.captions": "声音字幕", "settings.telemetry": "分享匿名游玩数据（仅限试玩）",

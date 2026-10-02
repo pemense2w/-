@@ -10,7 +10,7 @@ S = {
  "pause.settings": "Settings", "pause.title_screen": "Back to title",
  "settings.title": "Settings", "settings.language": "Language",
  "settings.amb": "Ambience volume", "settings.sfx": "Effects volume", "settings.music": "Music volume",
- "settings.text_size": "Text size", "settings.plain_font": "Plainer interface typeface",
+ "settings.text_size": "Text size", "settings.hotspot_glow": "Highlight what the cursor is over", "settings.plain_font": "Plainer interface typeface",
  "settings.reduce_motion": "Reduce motion", "settings.startle": "Startle moments",
  "settings.no_timing": "No timing (skip timed moments)", "settings.purist": "Purist (turn the notebook off)",
  "settings.captions": "Sound captions", "settings.telemetry": "Share anonymous play data (playtests only)",

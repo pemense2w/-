@@ -778,6 +778,7 @@
 "satchel.full": "鞄がいっぱいだ。先に何かを使い切らないと。",
 "settings.amb": "環境音の音量",
 "settings.captions": "効果音の字幕",
+"settings.hotspot_glow": "カーソルが乗ったものを強調する",
 "settings.language": "言語",
 "settings.music": "音楽の音量",
 "settings.no_timing": "時間制限なし（タイミング要素を省略）",

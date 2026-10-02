@@ -778,6 +778,7 @@
 "satchel.full": "The satchel is full. Something has to be used up first.",
 "settings.amb": "Ambience volume",
 "settings.captions": "Sound captions",
+"settings.hotspot_glow": "Highlight what the cursor is over",
 "settings.language": "Language",
 "settings.music": "Music volume",
 "settings.no_timing": "No timing (skip timed moments)",

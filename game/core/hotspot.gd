@@ -22,14 +22,20 @@ func _gui_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
 		_fire()
 		accept_event()
+		release_focus()          # a mouse click should not leave a keyboard focus ring behind
 	elif e is InputEventKey and e.pressed and not e.echo and (e.keycode == KEY_ENTER or e.keycode == KEY_KP_ENTER or e.keycode == KEY_SPACE):
 		_fire()
 		accept_event()
 
 func _fire() -> void:
-	flash = 1.0
-	set_process(true)
+	if _glow():
+		flash = 1.0
+		set_process(true)
 	activated.emit(hid)
+
+## Highlighting what the cursor is over is opt-in (Settings); keyboard focus and the "show all" ping always show.
+func _glow() -> bool:
+	return bool(G.settings.get("hotspot_glow", false))
 
 func ping(sec: float = 1.2) -> void:
 	show_all = sec
@@ -45,7 +51,7 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
 	var a := 0.0
-	if hover:
+	if hover and _glow():
 		a = 0.55
 	if has_focus():
 		a = 0.9

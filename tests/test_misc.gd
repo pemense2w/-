@@ -120,7 +120,7 @@ func _run() -> void:
 	# ---- hotspots: a small hotspot inside a bigger one is the one that gets the click
 	G.select_chapter(1); await tick(2)
 	G.setf("clock_set"); await at("c1_clock"); await tick(2)
-	var mh: Hotspot = main.view.get_hotspot("match")
+	var mh = main.view.get_hotspot("match")
 	check(mh != null and mh.visible, "the match is offered once the clock is set")
 	var centre: Vector2 = mh.position + mh.size / 2.0
 	check(main.view.hit_test(centre) == mh, "a click on the match lands on the match, not on the hatch around it")

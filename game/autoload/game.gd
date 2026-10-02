@@ -80,7 +80,7 @@ func _default_settings() -> Dictionary:
 	return {
 		"lang": L.system_default_language(), "vol_amb": 0.8, "vol_sfx": 0.9, "vol_music": 0.7,
 		"text_scale": 1.0, "plain_font": false, "reduce_motion": false, "startle": true,
-		"no_timing": false, "purist": false, "captions": true, "telemetry": false,
+		"no_timing": false, "purist": false, "captions": true, "telemetry": false, "hotspot_glow": false,
 	}
 
 func _load_settings() -> void:

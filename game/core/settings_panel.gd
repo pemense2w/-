@@ -10,10 +10,18 @@ func _ready() -> void:
 	var pn := UI.panel(1100, 980)
 	pn.position = Vector2(250, 90)
 	add_child(pn)
+	var outer := VBoxContainer.new()
+	outer.add_theme_constant_override("separation", 10)
+	pn.add_child(outer)
+	outer.add_child(UI.label(L.t("settings.title"), 40, UI.WARM))
+	var sc := ScrollContainer.new()
+	sc.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	sc.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	outer.add_child(sc)
 	var vb := VBoxContainer.new()
 	vb.add_theme_constant_override("separation", 10)
-	pn.add_child(vb)
-	vb.add_child(UI.label(L.t("settings.title"), 40, UI.WARM))
+	vb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	sc.add_child(vb)
 	# language
 	var lr := HBoxContainer.new()
 	lr.add_child(_lbl(L.t("settings.language"), 400))
@@ -26,12 +34,12 @@ func _ready() -> void:
 	vb.add_child(_slider("settings.sfx", "vol_sfx", 0.0, 1.0, 0.05))
 	vb.add_child(_slider("settings.music", "vol_music", 0.0, 1.0, 0.05))
 	vb.add_child(_slider("settings.text_size", "text_scale", 1.0, 1.5, 0.1))
-	for pair in [["settings.plain_font", "plain_font"], ["settings.reduce_motion", "reduce_motion"], ["settings.startle", "startle"],
+	for pair in [["settings.plain_font", "plain_font"], ["settings.hotspot_glow", "hotspot_glow"], ["settings.reduce_motion", "reduce_motion"], ["settings.startle", "startle"],
 			["settings.no_timing", "no_timing"], ["settings.purist", "purist"], ["settings.captions", "captions"], ["settings.telemetry", "telemetry"]]:
 		vb.add_child(_check(pair[0], pair[1]))
 	var close := UI.button(L.t("ui.close"), 240, 60)
 	close.pressed.connect(func(): closed.emit(); queue_free())
-	vb.add_child(close)
+	outer.add_child(close)
 	close.call_deferred("grab_focus")
 
 func _rebuild() -> void:

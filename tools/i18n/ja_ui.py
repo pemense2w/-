@@ -10,7 +10,7 @@ S = {
  "pause.settings": "設定", "pause.title_screen": "タイトルへ戻る",
  "settings.title": "設定", "settings.language": "言語",
  "settings.amb": "環境音の音量", "settings.sfx": "効果音の音量", "settings.music": "音楽の音量",
- "settings.text_size": "文字の大きさ", "settings.plain_font": "シンプルなUI書体",
+ "settings.text_size": "文字の大きさ", "settings.hotspot_glow": "カーソルが乗ったものを強調する", "settings.plain_font": "シンプルなUI書体",
  "settings.reduce_motion": "動きを減らす", "settings.startle": "驚かせる演出",
  "settings.no_timing": "時間制限なし（タイミング要素を省略）", "settings.purist": "ピュアモード（ノートを使わない）",
  "settings.captions": "効果音の字幕", "settings.telemetry": "匿名のプレイデータを送信（テストプレイのみ）",
